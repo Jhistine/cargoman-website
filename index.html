@@ -32,6 +32,42 @@
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
 
+<svg class="icon-defs" aria-hidden="true"><defs>
+  <symbol id="icon-gate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="4" y1="20" x2="4" y2="6"/><line x1="4" y1="7" x2="20" y2="4"/>
+    <line x1="9" y1="8.8" x2="11" y2="5.8"/><line x1="14" y1="6.9" x2="16" y2="3.9"/>
+  </symbol>
+  <symbol id="icon-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="8" x2="20" y2="8"/>
+    <path d="M4 8l-2 6a3 3 0 006 0z"/><path d="M20 8l-2 6a3 3 0 006 0z"/>
+    <line x1="8" y1="20" x2="16" y2="20"/>
+  </symbol>
+  <symbol id="icon-warehouse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 21V10l9-6 9 6v11"/><path d="M3 10h18"/><rect x="9" y="13" width="6" height="8"/>
+  </symbol>
+  <symbol id="icon-container" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="6" width="18" height="12" rx="1"/>
+    <line x1="7" y1="6" x2="7" y2="18"/><line x1="11" y1="6" x2="11" y2="18"/>
+    <line x1="15" y1="6" x2="15" y2="18"/><line x1="19" y1="6" x2="19" y2="18"/>
+  </symbol>
+  <symbol id="icon-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="2" width="10" height="20" rx="2"/><line x1="10" y1="18" x2="14" y2="18"/>
+    <path d="M9.5 11l2 2.5 4-5"/>
+  </symbol>
+  <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="4" y1="20" x2="20" y2="20"/><rect x="6" y="12" width="3" height="8"/>
+    <rect x="11" y="8" width="3" height="12"/><rect x="16" y="14" width="3" height="6"/>
+  </symbol>
+  <symbol id="icon-mountain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 20l6-11 4 6 2-3 6 8z"/><circle cx="18" cy="6" r="2"/>
+  </symbol>
+  <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="9" width="10" height="8" rx="1"/>
+    <path d="M12 12h4.4a1 1 0 01.8.4l2.3 3a1 1 0 01.2.6v1.5a.9.9 0 01-.9.9H12z"/>
+    <circle cx="6" cy="18.5" r="1.8"/><circle cx="17" cy="18.5" r="1.8"/>
+  </symbol>
+</defs></svg>
+
 <header id="site-header">
   <div class="nav-inner">
     <a href="index.html" class="logo"><img src="assets/img/cargoman-icon.svg" alt="" width="30" height="30">CargoMan</a>
@@ -71,19 +107,83 @@
         </div>
       </div>
       <div>
-        <div class="shot-frame">
-          <div class="order-mock" role="img" aria-label="Illustrative CargoMan order screen showing order number, client, product, order type and status columns">
-            <div class="om-bar"><span></span><span></span><span></span></div>
-            <div class="om-head">
-              <span>Order No</span><span>Client</span><span>Product</span><span>Type</span><span>Status</span>
-            </div>
-            <div class="om-row"><span class="mono">CLM-2026-0142</span><span>Acme Logistics</span><span>Copper Cathodes</span><span class="pill">REC &amp; DISP</span><span class="check">✓</span></div>
-            <div class="om-row"><span class="mono">CLM-2026-0143</span><span>Southport Freight</span><span>Machinery</span><span class="pill">REC &amp; DISP</span><span class="check">✓</span></div>
-            <div class="om-row active"><span class="mono">CLM-2026-0144</span><span>Highveld Terminals</span><span>Solar Panels</span><span class="pill">REC &amp; DISP</span><span class="check">✓</span></div>
-            <div class="om-row"><span class="mono">CLM-2026-0145</span><span>Coastal Depot Co</span><span>Bulk Ore</span><span class="pill">REC &amp; DISP</span><span class="check">✓</span></div>
-          </div>
+        <div class="journey-art">
+          <svg viewBox="0 0 660 400" role="img" aria-label="Illustrative diagram of the CargoMan gate-to-dispatch journey: access gate, weighbridge, warehouse, mobile checkpoint, and final dispatch, each connected in sequence.">
+            <defs>
+              <pattern id="j-grid" width="26" height="26" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.3" fill="rgba(255,255,255,0.05)"/>
+              </pattern>
+              <linearGradient id="j-line" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#2f6feb"/>
+                <stop offset="1" stop-color="#3fb0a6"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="660" height="400" fill="url(#j-grid)"/>
+
+            <path d="M60,140 C127,140 128,280 195,280 C262,280 263,140 330,140 C397,140 398,280 465,280 C532,280 533,140 600,140"
+                  fill="none" stroke="url(#j-line)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="127" cy="211" r="4" fill="var(--amber)"/>
+            <circle cx="262" cy="211" r="4" fill="var(--amber)"/>
+            <circle cx="397" cy="211" r="4" fill="var(--amber)"/>
+            <circle cx="532" cy="211" r="4" fill="var(--amber)"/>
+
+            <!-- 1 Access gate -->
+            <g>
+              <circle cx="60" cy="140" r="30" fill="#16294a" stroke="rgba(255,255,255,0.16)"/>
+              <circle cx="38" cy="118" r="10" fill="var(--blue)"/>
+              <text x="38" y="122" text-anchor="middle" class="j-num">1</text>
+              <use href="#icon-gate" x="47" y="127" width="26" height="26" class="j-node-icon"/>
+              <text x="60" y="93" text-anchor="middle" class="j-label">Access gate</text>
+              <rect x="14" y="60" width="92" height="22" rx="11" fill="rgba(23,150,90,0.16)" stroke="#2a8f63"/>
+              <text x="60" y="74.5" text-anchor="middle" class="j-pill-text">✓ Authorized</text>
+            </g>
+
+            <!-- 2 Weighbridge -->
+            <g>
+              <circle cx="195" cy="280" r="30" fill="#16294a" stroke="rgba(255,255,255,0.16)"/>
+              <circle cx="173" cy="258" r="10" fill="var(--blue)"/>
+              <text x="173" y="262" text-anchor="middle" class="j-num">2</text>
+              <use href="#icon-scale" x="182" y="267" width="26" height="26" class="j-node-icon"/>
+              <text x="195" y="352" text-anchor="middle" class="j-label">Weighbridge</text>
+              <rect x="149" y="319" width="92" height="22" rx="11" fill="rgba(23,150,90,0.16)" stroke="#2a8f63"/>
+              <text x="195" y="333.5" text-anchor="middle" class="j-pill-text">✓ Recorded</text>
+            </g>
+
+            <!-- 3 Warehouse -->
+            <g>
+              <circle cx="330" cy="140" r="30" fill="#16294a" stroke="rgba(255,255,255,0.16)"/>
+              <circle cx="308" cy="118" r="10" fill="var(--blue)"/>
+              <text x="308" y="122" text-anchor="middle" class="j-num">3</text>
+              <use href="#icon-warehouse" x="317" y="127" width="26" height="26" class="j-node-icon"/>
+              <text x="330" y="93" text-anchor="middle" class="j-label">Warehouse</text>
+              <rect x="284" y="60" width="92" height="22" rx="11" fill="rgba(23,150,90,0.16)" stroke="#2a8f63"/>
+              <text x="330" y="74.5" text-anchor="middle" class="j-pill-text">✓ Received</text>
+            </g>
+
+            <!-- 4 Mobile checkpoint -->
+            <g>
+              <circle cx="465" cy="280" r="30" fill="#16294a" stroke="rgba(255,255,255,0.16)"/>
+              <circle cx="443" cy="258" r="10" fill="var(--blue)"/>
+              <text x="443" y="262" text-anchor="middle" class="j-num">4</text>
+              <use href="#icon-mobile" x="452" y="267" width="26" height="26" class="j-node-icon"/>
+              <text x="465" y="352" text-anchor="middle" class="j-label">Mobile checkpoint</text>
+              <rect x="410" y="319" width="110" height="22" rx="11" fill="rgba(23,150,90,0.16)" stroke="#2a8f63"/>
+              <text x="465" y="333.5" text-anchor="middle" class="j-pill-text">✓ Verified</text>
+            </g>
+
+            <!-- 5 Final dispatch -->
+            <g>
+              <circle cx="600" cy="140" r="30" fill="#16294a" stroke="rgba(255,255,255,0.16)"/>
+              <circle cx="578" cy="118" r="10" fill="var(--blue)"/>
+              <text x="578" y="122" text-anchor="middle" class="j-num">5</text>
+              <use href="#icon-truck" x="587" y="127" width="26" height="26" class="j-node-icon"/>
+              <text x="600" y="93" text-anchor="middle" class="j-label">Final dispatch</text>
+              <rect x="554" y="60" width="92" height="22" rx="11" fill="rgba(23,150,90,0.16)" stroke="#2a8f63"/>
+              <text x="600" y="74.5" text-anchor="middle" class="j-pill-text">✓ Delivered</text>
+            </g>
+          </svg>
         </div>
-        <p class="shot-tag">Illustrative CargoMan order screen — order, client, product, and status at a glance</p>
+        <p class="shot-tag">Illustrative diagram — the CargoMan journey from gate to dispatch</p>
       </div>
     </div>
   </section>
@@ -125,12 +225,12 @@
         <h2>Six connected modules. One operational record.</h2>
       </div>
       <div class="cards">
-        <div class="card"><span class="tag">GATE</span><h3>Gate &amp; access control</h3><p>Match expected movements, record arrivals and entry, and maintain a clear view of vehicles and people on site.</p><a href="solutions.html#gate" class="go">See gate control <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><span class="tag">WEIGHBRIDGE</span><h3>Weighbridge operations</h3><p>Connect accurate weight capture to the right vehicle, cargo, order, and transaction.</p><a href="solutions.html#weighbridge" class="go">See weighbridge <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><span class="tag">WAREHOUSE</span><h3>Warehouse &amp; stock</h3><p>Control receiving, storage, packing, and dispatch with order-, lot-, item-, and barcode-level traceability.</p><a href="solutions.html#warehouse" class="go">See warehouse <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><span class="tag">CONTAINERS</span><h3>Container lifecycle</h3><p>Track configurable container movements, packed cargo, seals, vehicles, photos, and signatures in one history.</p><a href="solutions.html#containers" class="go">See containers <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><span class="tag">MOBILE</span><h3>Mobile &amp; offline execution</h3><p>Put scan-first capture, validation, photos, damages, and signatures in the hands of the operating team.</p><a href="solutions.html#mobile" class="go">See mobile <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><span class="tag">REPORTING</span><h3>Reporting &amp; integration</h3><p>Turn operational records into dashboards, documents, exports, and controlled data exchange.</p><a href="solutions.html#reporting" class="go">See reporting <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div><span class="tag">GATE</span><h3>Gate &amp; access control</h3><p>Match expected movements, record arrivals and entry, and maintain a clear view of vehicles and people on site.</p><a href="solutions.html#gate" class="go">See gate control <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div><span class="tag">WEIGHBRIDGE</span><h3>Weighbridge operations</h3><p>Connect accurate weight capture to the right vehicle, cargo, order, and transaction.</p><a href="solutions.html#weighbridge" class="go">See weighbridge <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div><span class="tag">WAREHOUSE</span><h3>Warehouse &amp; stock</h3><p>Control receiving, storage, packing, and dispatch with order-, lot-, item-, and barcode-level traceability.</p><a href="solutions.html#warehouse" class="go">See warehouse <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-container"/></svg></div><span class="tag">CONTAINERS</span><h3>Container lifecycle</h3><p>Track configurable container movements, packed cargo, seals, vehicles, photos, and signatures in one history.</p><a href="solutions.html#containers" class="go">See containers <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-mobile"/></svg></div><span class="tag">MOBILE</span><h3>Mobile &amp; offline execution</h3><p>Put scan-first capture, validation, photos, damages, and signatures in the hands of the operating team.</p><a href="solutions.html#mobile" class="go">See mobile <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div><span class="tag">REPORTING</span><h3>Reporting &amp; integration</h3><p>Turn operational records into dashboards, documents, exports, and controlled data exchange.</p><a href="solutions.html#reporting" class="go">See reporting <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
       </div>
     </div>
   </section>
@@ -240,10 +340,10 @@
         <h2>Built for real cargo sites.</h2>
       </div>
       <div class="industries">
-        <div class="ind-card"><h4>Terminals &amp; depots</h4><p>Coordinate trucks, cargo, weighing, storage, and dispatch through one connected workflow.</p></div>
-        <div class="ind-card"><h4>Warehouses</h4><p>Maintain item, lot, order, and evidence-based control from receiving through to dispatch.</p></div>
-        <div class="ind-card"><h4>Mining logistics</h4><p>Track expected movements, origin data, weights, and site handovers with a clear record.</p></div>
-        <div class="ind-card"><h4>Container operations</h4><p>Connect container events to cargo, trucks, seals, photos, and signatures in one history.</p></div>
+        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div><h4>Terminals &amp; depots</h4><p>Coordinate trucks, cargo, weighing, storage, and dispatch through one connected workflow.</p></div>
+        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div><h4>Warehouses</h4><p>Maintain item, lot, order, and evidence-based control from receiving through to dispatch.</p></div>
+        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-mountain"/></svg></div><h4>Mining logistics</h4><p>Track expected movements, origin data, weights, and site handovers with a clear record.</p></div>
+        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-container"/></svg></div><h4>Container operations</h4><p>Connect container events to cargo, trucks, seals, photos, and signatures in one history.</p></div>
       </div>
       <p style="margin-top:28px;"><a href="industries.html" class="btn btn-ghost on-light">See all industries</a></p>
     </div>

@@ -175,34 +175,42 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-foot{ display: flex; gap: 24px; flex-wrap: wrap; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-dark); font-size: 13.5px; color: rgba(255,255,255,0.6); }
 .hero-foot strong{ color: rgba(255,255,255,0.92); font-weight: 600; }
 
-.shot-frame{
-  background: #0d1626; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
-  padding: 10px; box-shadow: var(--shadow-lg);
-}
-.shot-frame img{ border-radius: 8px; width: 100%; }
 .shot-tag{ margin-top: 12px; font-size: 13px; color: rgba(255,255,255,0.55); text-align: center; }
 
-/* Illustrative order-list mockup used in the hero (no real customer data) */
-.order-mock{ background: #fff; border-radius: 8px; overflow: hidden; }
-.om-bar{ display: flex; gap: 6px; padding: 12px 14px; border-bottom: 1px solid var(--border); }
-.om-bar span{ width: 9px; height: 9px; border-radius: 50%; background: var(--border); }
-.om-bar span:nth-child(1){ background: #e0645a; }
-.om-bar span:nth-child(2){ background: #e3b23c; }
-.om-bar span:nth-child(3){ background: #4caf6e; }
-.om-head, .om-row{
-  display: grid; grid-template-columns: 1.3fr 1.3fr 1.2fr 1fr 0.5fr;
-  gap: 10px; padding: 12px 14px; align-items: center;
+/* Icon sprite: hidden defs block, referenced via <use> */
+.icon-defs{ position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* Hero journey graphic (illustrative — no real customer data or metrics) */
+.journey-art{
+  background: linear-gradient(160deg, #101f38, #0b1626);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
+  padding: 18px; box-shadow: var(--shadow-lg);
 }
-.om-head{ font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-soft); background: var(--offwhite); }
-.om-row{ font-size: 12.5px; color: var(--text); border-top: 1px solid var(--border); }
-.om-row.active{ background: rgba(47,111,235,0.06); }
-.om-row .mono{ font-family: var(--font-mono); font-size: 11.5px; color: var(--text-soft); }
-.om-row .pill{ font-size: 10.5px; font-weight: 700; letter-spacing: 0.03em; background: rgba(23,150,90,0.12); color: var(--green); padding: 3px 7px; border-radius: 5px; text-align: center; width: fit-content; }
-.om-row .check{ color: var(--green); font-weight: 700; text-align: center; }
-@media (max-width: 480px){
-  .om-head span:nth-child(3), .om-row span:nth-child(3){ display:none; }
-  .om-head, .om-row{ grid-template-columns: 1.2fr 1.1fr 0.9fr 0.4fr; }
+.journey-art svg{ display: block; width: 100%; height: auto; }
+.j-node-icon{ color: #fff; }
+.j-label{ font-family: var(--font-head); fill: #fff; font-size: 13px; font-weight: 600; }
+.j-pill-text{ font-family: var(--font-body); fill: #bfe3cf; font-size: 10.5px; font-weight: 600; }
+.j-num{ font-family: var(--font-mono); fill: #fff; font-size: 11px; font-weight: 700; }
+
+/* Small icon badges used on solution / industry cards */
+.card-icon{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 10px; margin-bottom: 16px;
+  background: rgba(47,111,235,0.1); color: var(--blue);
 }
+.card-icon svg{ width: 24px; height: 24px; }
+.ind-icon{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 9px; margin-bottom: 14px;
+  background: rgba(245,165,36,0.14); color: var(--amber-dark);
+}
+.ind-icon svg{ width: 21px; height: 21px; }
+.solution-icon{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 10px; margin-right: 4px;
+  background: rgba(47,111,235,0.1); color: var(--blue); flex: 0 0 auto;
+}
+.solution-icon svg{ width: 22px; height: 22px; }
 
 @media (max-width: 900px){
   .hero-grid{ grid-template-columns: 1fr; }
@@ -388,7 +396,7 @@ footer .foot-grid a:hover{ color: #fff; }
 .solution-block{ padding: 76px 0; border-bottom: 1px solid var(--border); }
 .solution-block:last-of-type{ border-bottom: none; }
 .solution-block:nth-of-type(even){ background: var(--offwhite); }
-.solution-head{ display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+.solution-head{ display: flex; align-items: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
 .solution-num{ font-family: var(--font-mono); font-size: 13px; color: var(--blue); font-weight: 700; }
 .capability-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 28px; margin-top: 22px; }
 .capability-grid li{ position: relative; padding-left: 22px; font-size: 15px; color: var(--text-soft); }
