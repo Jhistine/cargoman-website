@@ -180,17 +180,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Icon sprite: hidden defs block, referenced via <use> */
 .icon-defs{ position: absolute; width: 0; height: 0; overflow: hidden; }
 
-/* Hero journey graphic (illustrative — no real customer data or metrics) */
-.journey-art{
-  background: linear-gradient(160deg, var(--navy-2), var(--navy));
-  border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
-  padding: 18px; box-shadow: var(--shadow-lg);
+/* Hero visual: shows a cropped region of a supplied illustrative graphic
+   (assets/img/hero-visual.png) — the crop excludes the source image's own
+   nav/headline since this page has its own. */
+.hero-visual-crop{
+  position: relative; overflow: hidden; border-radius: 14px;
+  aspect-ratio: 800 / 775; background: #fff;
+  border: 1px solid rgba(255,255,255,0.12); box-shadow: var(--shadow-lg);
 }
-.journey-art svg{ display: block; width: 100%; height: auto; }
-.j-node-icon{ color: #fff; }
-.j-label{ font-family: var(--font-head); fill: #fff; font-size: 13px; font-weight: 600; }
-.j-pill-text{ font-family: var(--font-body); fill: #bfe3cf; font-size: 10.5px; font-weight: 600; }
-.j-num{ font-family: var(--font-mono); fill: #fff; font-size: 11px; font-weight: 700; }
+.hero-visual-crop img{
+  position: absolute; display: block; max-width: none;
+  width: 180%; left: -80%; top: -12.9%;
+}
 
 /* Small icon badges used on solution / industry cards */
 .card-icon, .ind-icon, .solution-icon{
