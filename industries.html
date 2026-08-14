@@ -69,6 +69,43 @@
     <circle cx="6.2" cy="17.3" r="1.9"/>
     <circle cx="17" cy="17.3" r="1.9"/>
   </symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3.2 19 6v5.4c0 4.6-3 7.6-7 8.4-4-.8-7-3.8-7-8.4V6z"/>
+    <path d="M9 12.2l2 2.2 4-4.6"/>
+  </symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="8.3"/>
+    <circle cx="12" cy="12" r="4.4"/>
+    <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9.5 14.5l5-5"/>
+    <path d="M8 16.2l-1.6 1.6a3 3 0 01-4.2-4.2L4 12"/>
+    <path d="M16 7.8l1.6-1.6a3 3 0 014.2 4.2L20 12"/>
+  </symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="10.5" width="14" height="9.5" rx="1.6"/>
+    <path d="M8 10.5V7.5a4 4 0 018 0v3"/>
+  </symbol>
+  <symbol id="icon-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="12" cy="5.5" rx="7.5" ry="2.5"/>
+    <path d="M4.5 5.5V18.5c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5V5.5"/>
+    <path d="M4.5 12c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5"/>
+  </symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10.5" cy="10.5" r="6.5"/>
+    <line x1="15.3" y1="15.3" x2="20.5" y2="20.5"/>
+  </symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="3.6"/>
+    <path d="M4.5 20c1-3.6 4-5.6 7.5-5.6s6.5 2 7.5 5.6"/>
+  </symbol>
+  <symbol id="icon-document" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.5 3h8l4 4v13.5a1 1 0 01-1 1h-11a1 1 0 01-1-1V4a1 1 0 011-1z"/>
+    <path d="M14 3v4h4"/>
+    <line x1="8.5" y1="12" x2="15.5" y2="12"/>
+    <line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/>
+  </symbol>
 </defs></svg>
 
 <header id="site-header">
@@ -137,15 +174,15 @@
         <h2>Built for every role on the operation.</h2>
       </div>
       <div class="persona-grid">
-        <div class="persona-card"><h4>Managing director / owner</h4><p>Operational control, risk reduction, scalability, and visibility across the site.</p></div>
-        <div class="persona-card"><h4>Operations manager</h4><p>Throughput, bottlenecks, live status, exceptions, and accountability.</p></div>
-        <div class="persona-card"><h4>Warehouse manager</h4><p>Accurate stock, receiving and dispatch control, traceability, and evidence.</p></div>
-        <div class="persona-card"><h4>Weighbridge manager / clerk</h4><p>Fast tickets, reliable readings, duplicate prevention, and simple workflows.</p></div>
-        <div class="persona-card"><h4>Security / gate controller</h4><p>Expected vehicles, driver and vehicle checks, entry/exit status, and auditability.</p></div>
-        <div class="persona-card"><h4>Client / cargo owner</h4><p>Secure visibility of their own orders, stock, movements, and reports.</p></div>
-        <div class="persona-card"><h4>Finance / commercial team</h4><p>Storage calculations, charges, supporting records, and invoice control.</p></div>
-        <div class="persona-card"><h4>IT / integration team</h4><p>Security, APIs, deployment options, resilience, and maintainability.</p></div>
-        <div class="persona-card"><h4>Mobile operator / tally clerk</h4><p>Fast scanning, minimal typing, clear validation, photos, signatures, and offline operation.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-target"/></svg></div><h4>Managing director / owner</h4><p>Operational control, risk reduction, scalability, and visibility across the site.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div><h4>Operations manager</h4><p>Throughput, bottlenecks, live status, exceptions, and accountability.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div><h4>Warehouse manager</h4><p>Accurate stock, receiving and dispatch control, traceability, and evidence.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div><h4>Weighbridge manager / clerk</h4><p>Fast tickets, reliable readings, duplicate prevention, and simple workflows.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div><h4>Security / gate controller</h4><p>Expected vehicles, driver and vehicle checks, entry/exit status, and auditability.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-user"/></svg></div><h4>Client / cargo owner</h4><p>Secure visibility of their own orders, stock, movements, and reports.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-document"/></svg></div><h4>Finance / commercial team</h4><p>Storage calculations, charges, supporting records, and invoice control.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-link"/></svg></div><h4>IT / integration team</h4><p>Security, APIs, deployment options, resilience, and maintainability.</p></div>
+        <div class="persona-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-mobile"/></svg></div><h4>Mobile operator / tally clerk</h4><p>Fast scanning, minimal typing, clear validation, photos, signatures, and offline operation.</p></div>
       </div>
     </div>
   </section>
