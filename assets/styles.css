@@ -27,8 +27,8 @@ html { scroll-behavior: smooth; }
   --red:        #d64545;
 
   /* type */
-  --font-head: Calibri, Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  --font-body: Calibri, Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  --font-head: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  --font-body: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   --font-mono: Consolas, 'Courier New', monospace;
 
   /* layout */
