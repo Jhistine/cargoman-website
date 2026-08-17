@@ -265,9 +265,9 @@ footer a:focus-visible, footer button:focus-visible{
 .card-icon, .ind-icon, .solution-icon{
   display: inline-flex; align-items: center; justify-content: center;
   color: #fff;
-  background: var(--green);
-  border: 1px solid var(--green);
-  box-shadow: 0 1px 2px rgba(0,105,48,0.1);
+  background: var(--orange);
+  border: 1px solid var(--orange);
+  box-shadow: 0 1px 2px rgba(255,87,34,0.15);
   transition: filter .18s ease, transform .18s ease;
 }
 .card-icon{ width: 48px; height: 48px; border-radius: 14px; margin-bottom: 16px; }
@@ -288,9 +288,14 @@ footer a:focus-visible, footer button:focus-visible{
 /* ============================================================
    Capability strip
    ============================================================ */
-.strip{ background: var(--offwhite); border-bottom: 1px solid var(--border); padding: 18px 0; }
-.strip .wrap{ font-size: 14px; color: var(--text-soft); text-align: center; }
-.strip strong{ color: var(--text); font-weight: 600; }
+.strip{ background: var(--offwhite); border-bottom: 1px solid var(--border); padding: 16px 0; }
+.strip-row{ display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.strip-label{ font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-soft); }
+.strip-pill{
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--dark); background: #fff; border: 1px solid var(--border);
+  padding: 6px 12px; border-radius: 20px;
+}
 
 /* ============================================================
    Manifest / operational journey grid
@@ -436,6 +441,7 @@ footer{ background: var(--ink); color: rgba(255,255,255,0.72); padding: 64px 0 2
 footer h5{ font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 16px; font-weight: 700; }
 footer .foot-grid a{ display: block; font-size: 14.5px; color: rgba(255,255,255,0.75); margin-bottom: 12px; }
 footer .foot-grid a:hover{ color: #fff; }
+.foot-grid .foot-by a{ display: inline-flex; margin-bottom: 0; }
 .foot-bottom{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 24px; font-size: 13px; color: rgba(255,255,255,0.45); }
 .foot-bottom a{ color: rgba(255,255,255,0.6); }
 .foot-bottom a:hover{ color: #fff; }
