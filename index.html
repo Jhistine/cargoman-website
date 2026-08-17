@@ -152,12 +152,12 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow on-dark">Logistics execution platform</p>
+        <p class="eyebrow">Logistics execution platform</p>
         <h1>Control Every Cargo Movement, from Gate to Dispatch.</h1>
         <p class="lede">CargoMan connects gate control, weighbridge operations, warehouse workflows, mobile teams, evidence, and reporting in one logistics execution platform.</p>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-primary">Book a demo</a>
-          <a href="platform.html" class="btn btn-ghost">Explore the platform</a>
+          <a href="platform.html" class="btn btn-ghost on-light">Explore the platform</a>
         </div>
         <div class="hero-foot">
           <span><strong>Web</strong> · management &amp; reporting</span>
@@ -189,53 +189,45 @@
         <p>Every stage below writes to one connected operational record - not several separate systems that need reconciling at month end.</p>
       </div>
     </div>
-    <div class="tape" role="list" aria-label="CargoMan operational workflow">
-      <div class="tape-track">
-        <div class="tape-stage" role="listitem"><span class="tape-num">1 / PLAN</span><h4>Plan the Movement</h4><p>Orders, booking references, cargo detail and expected trucks, captured before the vehicle arrives.</p></div>
-        <div class="tape-stage" role="listitem"><span class="tape-num">2 / GATE</span><h4>Control Arrival</h4><p>Identify vehicle, driver, transporter and client, and record entry and security checks at the gate.</p></div>
-        <div class="tape-stage" role="listitem"><span class="tape-num">3 / WEIGH</span><h4>Capture Weight</h4><p>Process weighbridge transactions, prevent duplicate tickets, and link readings to the right record.</p></div>
-        <div class="tape-stage" role="listitem"><span class="tape-num">4 / HANDLE</span><h4>Receive &amp; Handle</h4><p>Scan barcodes, allocate lots and orders, and record quantities, weights and damages.</p></div>
-        <div class="tape-stage" role="listitem"><span class="tape-num">5 / STORE</span><h4>Store &amp; Pack</h4><p>Allocate warehouse zones, control stock status, and manage packing workflows through to release.</p></div>
-        <div class="tape-stage" role="listitem"><span class="tape-num">6 / DISPATCH</span><h4>Release &amp; Dispatch</h4><p>Validate the movement, confirm items, capture final weights or container status, and record exit.</p></div>
-        <div class="tape-stage" role="listitem"><span class="tape-num">7 / REPORT</span><h4>Monitor &amp; Report</h4><p>Live status, stock balances, throughput and audit history - with the transaction evidence behind it.</p></div>
+    <div class="workflow-grid" role="list" aria-label="CargoMan operational workflow">
+      <div class="workflow-card" role="listitem">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-document"/></svg></div>
+        <h4>Plan the Movement</h4>
+        <p>Orders, booking references, cargo detail and expected trucks, captured before the vehicle arrives.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div>
+        <h4>Control Arrival</h4>
+        <p>Identify vehicle, driver, transporter and client, and record entry and security checks at the gate.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div>
+        <h4>Capture Weight</h4>
+        <p>Process weighbridge transactions, prevent duplicate tickets, and link readings to the right record.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div>
+        <h4>Receive &amp; Handle</h4>
+        <p>Scan barcodes, allocate lots and orders, and record quantities, weights and damages.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-container"/></svg></div>
+        <h4>Store &amp; Pack</h4>
+        <p>Allocate warehouse zones, control stock status, and manage packing workflows through to release.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-truck"/></svg></div>
+        <h4>Release &amp; Dispatch</h4>
+        <p>Validate the movement, confirm items, capture final weights or container status, and record exit.</p>
+      </div>
+      <div class="workflow-card full" role="listitem">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div>
+        <h4>Monitor &amp; Report</h4>
+        <p>Live status, stock balances, throughput and audit history - with the transaction evidence behind it.</p>
       </div>
     </div>
     <div class="wrap"><p class="tape-note">Not every deployment uses every stage - CargoMan is configured around the operation, not the other way around.</p>
     <div class="workflow-shot"><img src="assets/img/screenshots/container-lifecycle-workflow.png" alt="Illustration of the CargoMan container journey: booking, gate in, weigh in, yard storage, order release, gate out, weigh out, and on vessel."></div>
-    </div>
-
-    <!-- Desktop-only connected flow diagram - visual summary of the journey -->
-    <div class="flow-diagram">
-      <div class="flow-node">
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div>
-        <h5>Access gate</h5>
-        <p>Identify arrival, record entry and security checks.</p>
-        <span class="flow-pill">1</span>
-      </div>
-      <div class="flow-node">
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div>
-        <h5>Weighbridge</h5>
-        <p>Capture and link weight to the right order.</p>
-        <span class="flow-pill">2</span>
-      </div>
-      <div class="flow-node">
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div>
-        <h5>Warehouse</h5>
-        <p>Receive, allocate lots, and control stock.</p>
-        <span class="flow-pill">3</span>
-      </div>
-      <div class="flow-node">
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-mobile"/></svg></div>
-        <h5>Mobile capture</h5>
-        <p>Scan items, photograph, and verify in-hand.</p>
-        <span class="flow-pill">4</span>
-      </div>
-      <div class="flow-node">
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div>
-        <h5>Dispatch</h5>
-        <p>Release with status, evidence, and audit trail.</p>
-        <span class="flow-pill">5</span>
-      </div>
     </div>
   </section>
 
@@ -329,7 +321,7 @@
   <section class="section-dark">
     <div class="wrap split">
       <div>
-        <p class="eyebrow on-dark">Management visibility</p>
+        <p class="eyebrow">Management visibility</p>
         <h2>From Live Status to the Underlying Evidence.</h2>
         <p style="margin-top:16px;color:var(--slate-light);font-size:16px;">Move from a filtered list view straight down to the transaction behind it. Filter, search, and generate reports without leaving the platform.</p>
         <ul class="feature-list">
@@ -348,9 +340,9 @@
   </section>
 
   <!-- CONFIGURATION & INTEGRATION -->
-  <section class="section-dark" style="padding:88px 0; border-top:1px solid var(--border-dark);">
+  <section class="section-dark" style="padding:88px 0;">
     <div class="wrap" style="margin-bottom:44px;">
-      <p class="eyebrow on-dark">Configuration &amp; integration</p>
+      <p class="eyebrow">Configuration &amp; integration</p>
       <h2>Your Operation Is Connected. Your Systems Can Be Too.</h2>
       <p style="margin-top:16px;color:var(--slate-light);font-size:16px;max-width:56ch;">CargoMan fits into the environment around it through controlled permissions, configurable workflows, and multiple integration options.</p>
     </div>
@@ -382,12 +374,12 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="wrap">
-      <p class="eyebrow on-dark" style="justify-content:center;">Talk to CargoMan</p>
+      <p class="eyebrow" style="justify-content:center;">Talk to CargoMan</p>
       <h2>Let's Map CargoMan to Your Operation.</h2>
       <p>Show us how cargo moves through your site, and we'll demonstrate how CargoMan can connect the process.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-primary">Book a demo</a>
-        <a href="solutions.html" class="btn btn-ghost">Discuss your operation</a>
+        <a href="solutions.html" class="btn btn-ghost on-light">Discuss your operation</a>
       </div>
     </div>
   </section>
