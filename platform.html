@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Platform Overview | CargoMan">
 <meta property="og:description" content="How CargoMan works: web, desktop, and mobile surfaces, a connected gate-to-dispatch operating model, and controlled integration options.">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -110,7 +110,7 @@
 
 <header id="site-header">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="assets/img/cargoman-icon.svg" alt="" width="30" height="30">CargoMan</a>
+    <a href="index.html" class="logo"><img src="assets/img/cargoman-mark.png" alt="" width="30" height="30">CargoMan</a>
     <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <a href="platform.html" aria-current="page">Platform</a>
       <a href="solutions.html">Solutions</a>
@@ -236,8 +236,8 @@
         </ul>
       </div>
       <div class="split-visual">
-        <div class="mobile-visual" aria-hidden="true">
-          <div class="phone"><div class="pline" style="width:60%"></div><div class="pline" style="width:80%"></div><div class="pline" style="width:40%"></div><div class="pbtn"></div></div>
+        <div class="mobile-visual">
+          <img class="shot-phone" style="width:200px;" src="assets/img/screenshots/mobile-weighbridge-ticket.png" alt="CargoMan mobile weighbridge screen showing net weight, truck and driver information, and a tare/gross/net weight summary.">
         </div>
       </div>
     </div>
@@ -251,10 +251,10 @@
       <p style="margin-top:16px;color:var(--slate-light);font-size:16px;max-width:60ch;">CargoMan provides controlled data access and integration options without publishing security-sensitive implementation detail.</p>
     </div>
     <div class="integration">
-      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:#7fa6ff;"><use href="#icon-search"/></svg><span class="k">ODATA-STYLE QUERYING</span><p>Authenticated querying for filtering, sorting, selecting, and retrieving operational records.</p></div>
-      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:#7fa6ff;"><use href="#icon-link"/></svg><span class="k">PURPOSE-BUILT ENDPOINTS</span><p>REST endpoints for business processes that don't fit a generic data query.</p></div>
-      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:#7fa6ff;"><use href="#icon-lock"/></svg><span class="k">INTEGRATION USERS</span><p>Role-based integration users with token-secured access.</p></div>
-      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:#7fa6ff;"><use href="#icon-database"/></svg><span class="k">SQL VIEWS</span><p>Database-level reporting or exchange where that is the best fit.</p></div>
+      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-search"/></svg><span class="k">ODATA-STYLE QUERYING</span><p>Authenticated querying for filtering, sorting, selecting, and retrieving operational records.</p></div>
+      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-link"/></svg><span class="k">PURPOSE-BUILT ENDPOINTS</span><p>REST endpoints for business processes that don't fit a generic data query.</p></div>
+      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-lock"/></svg><span class="k">INTEGRATION USERS</span><p>Role-based integration users with token-secured access.</p></div>
+      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-database"/></svg><span class="k">SQL VIEWS</span><p>Database-level reporting or exchange where that is the best fit.</p></div>
     </div>
     <div class="wrap" style="margin-top:20px;">
       <p style="color:var(--slate-light);font-size:14.5px;">CargoMan can also post required data to a customer-owned endpoint, with site- or project-specific integration where needed.</p>
@@ -298,9 +298,9 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-logo"><img src="assets/img/cargoman-icon.svg" alt="" width="26" height="26">CargoMan</div>
+        <div class="foot-logo"><img src="assets/img/cargoman-mark.png" alt="" width="26" height="26">CargoMan</div>
         <p class="foot-p">A logistics execution platform that connects gate control, weighbridge operations, warehouse workflows, mobile teams, evidence, and reporting.</p>
-        <p class="foot-by">Built by <a href="https://www.rapiddev.co.za">RapidDev</a></p>
+        <p class="foot-by">Built by <a href="https://www.rapiddev.co.za"><img src="assets/img/rapiddev-mark.png" alt="" width="16" height="16">RapidDev</a></p>
       </div>
       <div>
         <h5>PLATFORM</h5>
@@ -310,10 +310,12 @@
       </div>
       <div>
         <h5>SOLUTIONS</h5>
-        <a href="solutions.html#gate">Gate &amp; access control</a>
-        <a href="solutions.html#weighbridge">Weighbridge</a>
-        <a href="solutions.html#warehouse">Warehouse &amp; stock</a>
-        <a href="solutions.html#containers">Containers</a>
+        <a href="solutions/gate-access-control.html">Gate &amp; access control</a>
+        <a href="solutions/weighbridge.html">Weighbridge</a>
+        <a href="solutions/warehouse.html">Warehouse &amp; stock</a>
+        <a href="solutions/container-management.html">Containers</a>
+        <a href="solutions/mobile-operations.html">Mobile &amp; offline</a>
+        <a href="solutions/reporting-integrations.html">Reporting &amp; integration</a>
       </div>
       <div>
         <h5>COMPANY</h5>

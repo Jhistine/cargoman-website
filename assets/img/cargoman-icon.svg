@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="CargoMan">
-  <rect width="32" height="32" rx="8" fill="#2F6FEB"/>
-  <path d="M6 20.5V12a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M18 15h4.4a1 1 0 0 1 .8.4l2.3 3a1 1 0 0 1 .2.6v1.5a.9.9 0 0 1-.9.9H18" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="10.5" cy="21.5" r="1.8" fill="#0A1420" stroke="#fff" stroke-width="1.4"/>
-  <circle cx="21.5" cy="21.5" r="1.8" fill="#0A1420" stroke="#fff" stroke-width="1.4"/>
-  <path d="M6 15.5h6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
-</svg>

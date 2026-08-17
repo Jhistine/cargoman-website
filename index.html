@@ -11,8 +11,9 @@
 <meta property="og:description" content="Control every cargo movement, from gate to dispatch. One platform for weighbridges, warehouses, gate access, mobile teams, evidence, and reporting.">
 <meta property="og:url" content="https://www.cargoman.co.za/">
 <meta property="og:site_name" content="CargoMan">
+<meta property="og:image" content="https://www.cargoman.co.za/assets/img/screenshots/gate-access-control-scene.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -120,11 +121,15 @@
     <line x1="8.5" y1="12" x2="15.5" y2="12"/>
     <line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/>
   </symbol>
+  <symbol id="icon-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 8.2A1.2 1.2 0 015.2 7H8l1.1-1.6h5.8L16 7h2.8A1.2 1.2 0 0120 8.2v10.6A1.2 1.2 0 0118.8 20H5.2A1.2 1.2 0 014 18.8z"/>
+    <circle cx="12" cy="13" r="3.4"/>
+  </symbol>
 </defs></svg>
 
 <header id="site-header">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><img src="assets/img/cargoman-icon.svg" alt="" width="30" height="30">CargoMan</a>
+    <a href="index.html" class="logo"><img src="assets/img/cargoman-mark.png" alt="" width="30" height="30">CargoMan</a>
     <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <a href="platform.html">Platform</a>
       <a href="solutions.html">Solutions</a>
@@ -161,10 +166,11 @@
         </div>
       </div>
       <div>
-        <div class="hero-visual-crop">
-          <img src="assets/img/hero-visual.png" alt="Illustrative operational diagram showing the CargoMan journey from access gate through weighbridge, warehouse, mobile checkpoint, and final dispatch, with example dashboard panels.">
+        <div class="hero-visual">
+          <img class="shot-scene" src="assets/img/screenshots/gate-access-control-scene.png" alt="CargoMan gate access control: a truck and container held at a barrier gate beside a card reader and gatehouse.">
+          <img class="shot-phone" src="assets/img/screenshots/mobile-weighbridge-ticket.png" alt="CargoMan mobile weighbridge screen showing net weight, truck and driver information, and a tare/gross/net weight summary.">
         </div>
-        <p class="shot-tag">Illustrative graphic — the CargoMan journey from gate to dispatch</p>
+        <p class="shot-tag">Real CargoMan screens — gate access control and weighbridge weight capture</p>
       </div>
     </div>
   </section>
@@ -195,7 +201,43 @@
         <div class="tape-stage" role="listitem"><span class="tape-num">07 / REPORT</span><h4>Monitor &amp; report</h4><p>Live status, stock balances, throughput and audit history — with the transaction evidence behind it.</p></div>
       </div>
     </div>
-    <div class="wrap"><p class="tape-note">Not every deployment uses every stage — CargoMan is configured around the operation, not the other way around.</p></div>
+    <div class="wrap"><p class="tape-note">Not every deployment uses every stage — CargoMan is configured around the operation, not the other way around.</p>
+    <div class="workflow-shot"><img src="assets/img/screenshots/container-lifecycle-workflow.png" alt="Illustration of the CargoMan container journey: booking, gate in, weigh in, yard storage, order release, gate out, weigh out, and on vessel."></div>
+    </div>
+
+    <!-- Desktop-only connected flow diagram — visual summary of the journey -->
+    <div class="flow-diagram">
+      <div class="flow-node">
+        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div>
+        <h5>Access gate</h5>
+        <p>Identify arrival, record entry and security checks.</p>
+        <span class="flow-pill">01</span>
+      </div>
+      <div class="flow-node">
+        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div>
+        <h5>Weighbridge</h5>
+        <p>Capture and link weight to the right order.</p>
+        <span class="flow-pill">02</span>
+      </div>
+      <div class="flow-node">
+        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div>
+        <h5>Warehouse</h5>
+        <p>Receive, allocate lots, and control stock.</p>
+        <span class="flow-pill">03</span>
+      </div>
+      <div class="flow-node">
+        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-mobile"/></svg></div>
+        <h5>Mobile capture</h5>
+        <p>Scan items, photograph, and verify in-hand.</p>
+        <span class="flow-pill">04</span>
+      </div>
+      <div class="flow-node">
+        <div class="flow-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div>
+        <h5>Dispatch</h5>
+        <p>Release with status, evidence, and audit trail.</p>
+        <span class="flow-pill">05</span>
+      </div>
+    </div>
   </section>
 
   <!-- CORE SOLUTION CARDS -->
@@ -206,18 +248,43 @@
         <h2>Six connected modules. One operational record.</h2>
       </div>
       <div class="cards">
-        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div><span class="tag">GATE</span><h3>Gate &amp; access control</h3><p>Match expected movements, record arrivals and entry, and maintain a clear view of vehicles and people on site.</p><a href="solutions.html#gate" class="go">See gate control <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div><span class="tag">WEIGHBRIDGE</span><h3>Weighbridge operations</h3><p>Connect accurate weight capture to the right vehicle, cargo, order, and transaction.</p><a href="solutions.html#weighbridge" class="go">See weighbridge <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div><span class="tag">WAREHOUSE</span><h3>Warehouse &amp; stock</h3><p>Control receiving, storage, packing, and dispatch with order-, lot-, item-, and barcode-level traceability.</p><a href="solutions.html#warehouse" class="go">See warehouse <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-container"/></svg></div><span class="tag">CONTAINERS</span><h3>Container lifecycle</h3><p>Track configurable container movements, packed cargo, seals, vehicles, photos, and signatures in one history.</p><a href="solutions.html#containers" class="go">See containers <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-mobile"/></svg></div><span class="tag">MOBILE</span><h3>Mobile &amp; offline execution</h3><p>Put scan-first capture, validation, photos, damages, and signatures in the hands of the operating team.</p><a href="solutions.html#mobile" class="go">See mobile <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div><span class="tag">REPORTING</span><h3>Reporting &amp; integration</h3><p>Turn operational records into dashboards, documents, exports, and controlled data exchange.</p><a href="solutions.html#reporting" class="go">See reporting <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div><span class="tag">GATE</span><h3>Gate &amp; access control</h3><p>Match expected movements, record arrivals and entry, and maintain a clear view of vehicles and people on site.</p><a href="solutions/gate-access-control.html" class="go">See gate control <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div><span class="tag">WEIGHBRIDGE</span><h3>Weighbridge operations</h3><p>Connect accurate weight capture to the right vehicle, cargo, order, and transaction.</p><a href="solutions/weighbridge.html" class="go">See weighbridge <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div><span class="tag">WAREHOUSE</span><h3>Warehouse &amp; stock</h3><p>Control receiving, storage, packing, and dispatch with order-, lot-, item-, and barcode-level traceability.</p><a href="solutions/warehouse.html" class="go">See warehouse <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-container"/></svg></div><span class="tag">CONTAINERS</span><h3>Container lifecycle</h3><p>Track configurable container movements, packed cargo, seals, vehicles, photos, and signatures in one history.</p><a href="solutions/container-management.html" class="go">See containers <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-mobile"/></svg></div><span class="tag">MOBILE</span><h3>Mobile &amp; offline execution</h3><p>Put scan-first capture, validation, photos, damages, and signatures in the hands of the operating team.</p><a href="solutions/mobile-operations.html" class="go">See mobile <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+        <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div><span class="tag">REPORTING</span><h3>Reporting &amp; integration</h3><p>Turn operational records into dashboards, documents, exports, and controlled data exchange.</p><a href="solutions/reporting-integrations.html" class="go">See reporting <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REAL PRODUCT SHOWCASE -->
+  <section class="section section-tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Real product, real workflows</p>
+        <h2>What CargoMan actually looks like on site.</h2>
+        <p>Real CargoMan screens from the reporting dashboard and mobile gate workflow, on desktop and handheld.</p>
+      </div>
+      <div class="showcase">
+        <div class="showcase-item">
+          <img class="shot-scene" style="box-shadow:none;" src="assets/img/screenshots/desktop-stock-report.png" alt="CargoMan stock report dashboard showing total items, total quantity, low-stock and out-of-stock counts, and an item-level status table.">
+          <h4>Stock report &amp; dashboard</h4>
+          <p>Total items, quantity, and stock status roll up into one filterable report, exportable straight from the platform.</p>
+        </div>
+        <div class="showcase-col">
+          <div class="showcase-item">
+            <img class="shot-phone" style="max-width:220px; margin:0 auto;" src="assets/img/screenshots/mobile-truck-authorized.png" alt="CargoMan mobile screen confirming a truck is authorized, with the vehicle registration number displayed.">
+            <h4>Truck authorization</h4>
+            <p>Gate staff get a clear, confirmed status on the vehicle in front of them before it moves onward.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TRACEABILITY & EVIDENCE -->
-  <section class="section section-tint">
+  <section class="section">
     <div class="wrap split">
       <div>
         <p class="eyebrow">Traceability &amp; evidence</p>
@@ -231,25 +298,18 @@
         </ul>
       </div>
       <div class="split-visual">
-        <div class="trail" aria-hidden="true">
-          <div class="t-row"><span class="t-time">08:14</span><span class="t-evt">Gate entry recorded</span><span class="t-tag">Gate</span></div>
-          <div class="t-row"><span class="t-time">08:22</span><span class="t-evt">Weighbridge ticket captured</span><span class="t-tag">Weigh</span></div>
-          <div class="t-row"><span class="t-time">08:41</span><span class="t-evt">Item scan — lot allocated</span><span class="t-tag">Warehouse</span></div>
-          <div class="t-row"><span class="t-time">08:44</span><span class="t-evt">Damage note + photo attached</span><span class="t-tag amber">Evidence</span></div>
-          <div class="t-row"><span class="t-time">09:05</span><span class="t-evt">Driver signature captured</span><span class="t-tag amber">Evidence</span></div>
-          <div class="t-row"><span class="t-time">09:12</span><span class="t-evt">Dispatch released — GDN printed</span><span class="t-tag">Dispatch</span></div>
-        </div>
+        <img class="shot-phone" style="max-width:260px;" src="assets/img/screenshots/mobile-truck-authorized.png" alt="CargoMan mobile screen confirming a truck is authorized, with the vehicle registration number as part of the record.">
       </div>
     </div>
   </section>
 
   <!-- MOBILE / OFFLINE -->
-  <section class="section">
+  <section class="section section-tint">
     <div class="wrap split reverse">
       <div class="split-visual">
-        <div class="mobile-visual" aria-hidden="true">
-          <div class="phone"><div class="pline" style="width:60%"></div><div class="pline" style="width:80%"></div><div class="pline" style="width:40%"></div><div class="pbtn"></div></div>
-          <div class="phone" style="margin-top:26px;"><div class="pline" style="width:50%"></div><div class="pline" style="width:75%"></div><div class="pline" style="width:65%"></div><div class="pbtn"></div><span class="status-pill"><span class="dot"></span>Synced</span></div>
+        <div class="mobile-visual">
+          <img class="shot-phone lift" src="assets/img/screenshots/mobile-weighbridge-ticket.png" alt="CargoMan mobile weighbridge screen capturing weight and truck detail from the yard.">
+          <img class="shot-phone" src="assets/img/screenshots/mobile-truck-authorized.png" alt="CargoMan mobile screen confirming a truck is authorized, captured at the gate.">
         </div>
       </div>
       <div>
@@ -267,46 +327,36 @@
   </section>
 
   <!-- MANAGEMENT VISIBILITY -->
-  <section class="section section-dark">
+  <section class="section-dark">
     <div class="wrap split">
       <div>
         <p class="eyebrow on-dark">Management visibility</p>
         <h2>From live status to the underlying evidence.</h2>
-        <p style="margin-top:16px;color:var(--slate-light);font-size:16px;">Move from a dashboard view straight down to the transaction, photo, or signature behind it. Filter, export, and report without leaving the platform.</p>
+        <p style="margin-top:16px;color:var(--slate-light);font-size:16px;">Move from a filtered list view straight down to the transaction behind it. Filter, search, and generate reports without leaving the platform.</p>
         <ul class="feature-list">
-          <li style="color:var(--slate-light);">Live and historical dashboards</li>
+          <li style="color:var(--slate-light);">Filterable, searchable operational records</li>
           <li style="color:var(--slate-light);">Stock movement and order balances</li>
-          <li style="color:var(--slate-light);">Throughput, site occupancy, and turnaround</li>
-          <li style="color:var(--slate-light);">Full audit history behind every figure</li>
+          <li style="color:var(--slate-light);">One-click packing list and report generation</li>
+          <li style="color:var(--slate-light);">Role-based access to what each user should see</li>
         </ul>
       </div>
       <div class="split-visual">
-        <div class="dash" aria-hidden="true">
-          <div class="dash-top"><span class="lbl">SITE OVERVIEW</span><span class="lbl">ILLUSTRATIVE</span></div>
-          <div class="dash-kpis">
-            <div class="kpi"><div class="n">—</div><div class="l">Vehicles today</div></div>
-            <div class="kpi"><div class="n">—</div><div class="l">On-time dispatch</div></div>
-            <div class="kpi"><div class="n">—</div><div class="l">Weighed today</div></div>
-          </div>
-          <div class="dash-chart">
-            <i style="height:40%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:80%"></i>
-            <i style="height:70%"></i><i style="height:90%"></i><i style="height:58%"></i><i style="height:75%"></i>
-            <i style="height:48%"></i><i style="height:62%"></i><i style="height:88%"></i><i style="height:55%"></i>
-          </div>
+        <div class="report-frame">
+          <img class="shot-scene" src="assets/img/screenshots/desktop-stock-report.png" alt="CargoMan stock report dashboard showing total items, total quantity, low-stock and out-of-stock counts, and an item-level status table.">
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONFIGURATION & INTEGRATION -->
-  <section class="section-dark" style="padding:88px 0;">
+  <section class="section-dark" style="padding:88px 0; border-top:1px solid var(--border-dark);">
     <div class="wrap" style="margin-bottom:44px;">
       <p class="eyebrow on-dark">Configuration &amp; integration</p>
       <h2>Your operation is connected. Your systems can be too.</h2>
       <p style="margin-top:16px;color:var(--slate-light);font-size:16px;max-width:56ch;">CargoMan fits into the environment around it through controlled permissions, configurable workflows, and multiple integration options.</p>
     </div>
     <div class="integration">
-      <div class="int-item"><span class="k">QUERY ACCESS</span><p>Authenticated, filterable querying for retrieving operational records.</p></div>
+      <div class="int-item"><span class="k">QUERY ACCESS</span><p>Authenticated, OData-style querying for filtering, sorting, and retrieving operational records.</p></div>
       <div class="int-item"><span class="k">REST ENDPOINTS</span><p>Purpose-built endpoints for business processes that don't fit a generic data query.</p></div>
       <div class="int-item"><span class="k">ROLE-BASED ACCESS</span><p>Token-secured integration users, scoped to what each system needs to see.</p></div>
       <div class="int-item"><span class="k">DATABASE VIEWS</span><p>SQL views where database-level reporting or data exchange is the best fit.</p></div>
@@ -349,9 +399,9 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-logo"><img src="assets/img/cargoman-icon.svg" alt="" width="26" height="26">CargoMan</div>
+        <div class="foot-logo"><img src="assets/img/cargoman-mark.png" alt="" width="26" height="26">CargoMan</div>
         <p class="foot-p">A logistics execution platform that connects gate control, weighbridge operations, warehouse workflows, mobile teams, evidence, and reporting.</p>
-        <p class="foot-by">Built by <a href="https://www.rapiddev.co.za">RapidDev</a></p>
+        <p class="foot-by">Built by <a href="https://www.rapiddev.co.za"><img src="assets/img/rapiddev-mark.png" alt="" width="16" height="16">RapidDev</a></p>
       </div>
       <div>
         <h5>PLATFORM</h5>
@@ -361,10 +411,12 @@
       </div>
       <div>
         <h5>SOLUTIONS</h5>
-        <a href="solutions.html#gate">Gate &amp; access control</a>
-        <a href="solutions.html#weighbridge">Weighbridge</a>
-        <a href="solutions.html#warehouse">Warehouse &amp; stock</a>
-        <a href="solutions.html#containers">Containers</a>
+        <a href="solutions/gate-access-control.html">Gate &amp; access control</a>
+        <a href="solutions/weighbridge.html">Weighbridge</a>
+        <a href="solutions/warehouse.html">Warehouse &amp; stock</a>
+        <a href="solutions/container-management.html">Containers</a>
+        <a href="solutions/mobile-operations.html">Mobile &amp; offline</a>
+        <a href="solutions/reporting-integrations.html">Reporting &amp; integration</a>
       </div>
       <div>
         <h5>COMPANY</h5>
