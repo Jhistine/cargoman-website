@@ -7,42 +7,43 @@ html { scroll-behavior: smooth; }
 
 :root{
   /* colour — brand palette: Primary Green, Primary Orange, Accent Blue,
-     on a predominantly white background. A derived deeper green
-     (--green-deep) is used specifically for body-copy-sized text and the
-     one dark section (the footer), since the Primary Green on its own
-     only reaches ~4:1 contrast on white — enough for headings and large
-     UI, short of the 4.5:1 small text needs. Accent Blue is reserved for
+     on a predominantly white background. The literal Primary Green only
+     reaches ~2.9:1 contrast on white — short even of the 3:1 large-text
+     minimum — so a derived deeper shade (--green-deep) carries every
+     readable use (headings, nav, body copy, borders, the footer). The
+     literal Primary Green is kept for fills it's paired with white on top
+     of (icon badges) rather than for text. Accent Blue is reserved for
      decorative touches (dots, thin tints) rather than text or icon fills,
      since at this brightness it doesn't reach reliable text contrast
      against either white or dark backgrounds. */
-  --green:      #338E56;  /* Primary Green */
+  --green:      #00B050;  /* Primary Green — fills only, not text */
   --orange:     #FF5722;  /* Primary Orange */
   --blue:       #00BDFF;  /* Accent Blue */
   --white:      #ffffff;
-  --green-deep: #266940;  /* derived — body text / footer background */
+  --green-deep: #006930;  /* derived — all readable text + footer background */
 
-  --dark:   var(--green);       /* headings, nav, icon-badge fill, large UI */
+  --dark:   var(--green-deep);  /* headings, nav, borders, large UI */
   --ink:    var(--green-deep);  /* footer / skip-link background, prominent labels */
   --light:  var(--blue);        /* accents only — see note above */
 
-  --brand:        var(--green);
-  --brand-dark:   var(--green);
-  --brand-mid:    var(--green);
-  --lime:         var(--green);
-  --lime-text:    var(--green);
+  --brand:        var(--green-deep);
+  --brand-dark:   var(--green-deep);
+  --brand-mid:    var(--green-deep);
+  --lime:         var(--green-deep);
+  --lime-text:    var(--green-deep);
   --red:          var(--green-deep);   /* no red in this palette — states differ by shape/weight, not hue */
 
-  --offwhite:     rgba(51,142,86,0.05);    /* faint green wash for large tinted areas */
-  --tint:         rgba(51,142,86,0.10);    /* soft green wash for alternating sections/badges */
+  --offwhite:     rgba(0,176,80,0.05);    /* faint green wash for large tinted areas */
+  --tint:         rgba(0,176,80,0.10);    /* soft green wash for alternating sections/badges */
   --blue-tint:    rgba(0,189,255,0.14);    /* decorative blue wash — small accents only */
-  --border:       rgba(38,105,64,0.14);    /* decorative dividers */
-  --border-strong:rgba(38,105,64,0.6);     /* interactive/UI-component borders (meets 3:1) */
+  --border:       rgba(0,105,48,0.14);    /* decorative dividers */
+  --border-strong:rgba(0,105,48,0.6);     /* interactive/UI-component borders (meets 3:1) */
   --border-dark:  rgba(255,255,255,0.18);  /* dividers on the dark footer */
-  --slate-300:    rgba(38,105,64,0.3);
-  --slate-light:  rgba(38,105,64,0.8);     /* muted body copy — alias of --text-soft */
+  --slate-300:    rgba(0,105,48,0.3);
+  --slate-light:  rgba(0,105,48,0.8);     /* muted body copy — alias of --text-soft */
 
   --text:         var(--green-deep);
-  --text-soft:    rgba(38,105,64,0.82);
+  --text-soft:    rgba(0,105,48,0.82);
 
   /* type — Inter only, throughout */
   --font-head: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -53,9 +54,9 @@ html { scroll-behavior: smooth; }
   --content-w: 1160px;
   --radius: 10px;
   --radius-sm: 6px;
-  --shadow-sm: 0 1px 2px rgba(38,105,64,0.08), 0 1px 1px rgba(38,105,64,0.05);
-  --shadow-md: 0 12px 32px rgba(38,105,64,0.12), 0 2px 8px rgba(38,105,64,0.07);
-  --shadow-lg: 0 24px 64px rgba(38,105,64,0.20);
+  --shadow-sm: 0 1px 2px rgba(0,105,48,0.08), 0 1px 1px rgba(0,105,48,0.05);
+  --shadow-md: 0 12px 32px rgba(0,105,48,0.12), 0 2px 8px rgba(0,105,48,0.07);
+  --shadow-lg: 0 24px 64px rgba(0,105,48,0.20);
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -218,7 +219,7 @@ footer a:focus-visible, footer button:focus-visible{
   display: flex; align-items: center; gap: 6px;
   background: var(--tint); padding: 10px 14px; border-bottom: 1px solid var(--border);
 }
-.device-frame .device-bar i{ width: 9px; height: 9px; border-radius: 50%; background: rgba(38,105,64,0.22); display: block; }
+.device-frame .device-bar i{ width: 9px; height: 9px; border-radius: 50%; background: rgba(0,105,48,0.22); display: block; }
 .device-frame img{ display: block; width: 100%; height: auto; }
 
 .phone-frame{
@@ -264,9 +265,9 @@ footer a:focus-visible, footer button:focus-visible{
 .card-icon, .ind-icon, .solution-icon{
   display: inline-flex; align-items: center; justify-content: center;
   color: #fff;
-  background: var(--dark);
-  border: 1px solid var(--dark);
-  box-shadow: 0 1px 2px rgba(38,105,64,0.1);
+  background: var(--green);
+  border: 1px solid var(--green);
+  box-shadow: 0 1px 2px rgba(0,105,48,0.1);
   transition: filter .18s ease, transform .18s ease;
 }
 .card-icon{ width: 48px; height: 48px; border-radius: 14px; margin-bottom: 16px; }
@@ -493,7 +494,7 @@ footer .foot-grid a:hover{ color: #fff; }
 .step-list li::before{
   counter-increment: step; content: counter(step);
   position: absolute; left: 0; top: -2px; width: 30px; height: 30px; border-radius: 50%;
-  background: var(--tint); color: var(--ink); border: 1px solid rgba(38,105,64,0.28);
+  background: var(--tint); color: var(--ink); border: 1px solid rgba(0,105,48,0.28);
   display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 700; font-size: 13.5px;
 }
 .step-list h4{ font-size: 16px; margin-bottom: 4px; }
@@ -559,7 +560,7 @@ footer .foot-grid a:hover{ color: #fff; }
 .form-consent input{ margin-top: 3px; min-height: auto; }
 .form-status{ font-size: 14.5px; padding: 14px 16px; border-radius: 8px; margin-top: 18px; display: none; }
 .form-status.show{ display: block; }
-.form-status.success{ background: var(--tint); color: var(--ink); border: 1px solid rgba(38,105,64,0.22); }
+.form-status.success{ background: var(--tint); color: var(--ink); border: 1px solid rgba(0,105,48,0.22); }
 .form-status.error{ background: var(--white); color: var(--orange); border: 1.5px solid rgba(255,87,34,0.4); }
 @media (max-width: 640px){ .form-grid{ grid-template-columns: 1fr; } .form-field.full{ grid-column: auto; } }
 
