@@ -199,8 +199,28 @@ footer a:focus-visible, footer button:focus-visible{
 .hero h1{ color: var(--dark); }
 .hero .lede{ margin-top: 18px; font-size: 18px; color: var(--text-soft); max-width: 52ch; }
 .hero-actions{ display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
-.hero-foot{ display: flex; gap: 24px; flex-wrap: wrap; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13.5px; color: var(--text-soft); }
-.hero-foot strong{ color: var(--ink); font-weight: 600; }
+.hero-foot{ display: flex; gap: 0; flex-wrap: wrap; margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--border); }
+.hero-cap{
+  display: flex; align-items: flex-start; gap: 11px; flex: 1 1 150px;
+  padding: 8px 20px; margin: -8px 0; border-radius: 10px;
+  transition: background .18s ease, transform .18s ease;
+}
+.hero-cap:hover{ background: var(--offwhite); transform: translateY(-2px); }
+.hero-cap + .hero-cap{ border-left: 1px solid var(--border); }
+.hero-cap-icon{
+  width: 34px; height: 34px; border-radius: 9px; flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--tint); color: var(--dark); border-bottom: 2px solid var(--orange);
+  transition: background .18s ease, color .18s ease;
+}
+.hero-cap:hover .hero-cap-icon{ background: var(--orange); color: #fff; border-bottom-color: var(--dark); }
+.hero-cap-icon svg{ width: 17px; height: 17px; }
+.hero-cap-label{ display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--dark); margin-bottom: 3px; }
+.hero-cap-desc{ display: block; font-size: 13px; color: var(--text-soft); line-height: 1.35; }
+@media (max-width: 560px){
+  .hero-cap{ flex: 1 1 100%; }
+  .hero-cap + .hero-cap{ border-left: none; margin-top: 8px; }
+}
 
 .shot-tag{ margin-top: 12px; font-size: 12.5px; color: var(--text-soft); }
 
@@ -545,6 +565,24 @@ footer .foot-grid a:hover{ color: #fff; }
 .value-card h4{ font-size: 17px; margin-bottom: 8px; }
 .value-card p{ font-size: 14.5px; color: var(--text-soft); }
 @media (max-width: 760px){ .value-grid{ grid-template-columns: 1fr; } }
+
+/* Platform-benefits grid (homepage) - interactive icon cards */
+.benefit-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.benefit-card{
+  padding: 22px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: #fff; transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.benefit-card:hover{ border-color: var(--dark); box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.benefit-icon{
+  width: 40px; height: 40px; border-radius: 11px; margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--dark); color: #fff; transition: background .18s ease;
+}
+.benefit-icon svg{ width: 20px; height: 20px; }
+.benefit-card:hover .benefit-icon{ background: var(--orange); }
+.benefit-card h4{ font-size: 16.5px; margin-bottom: 7px; color: var(--ink); }
+.benefit-card p{ font-size: 14px; color: var(--text-soft); line-height: 1.55; }
+@media (max-width: 760px){ .benefit-grid{ grid-template-columns: 1fr; } }
 
 /* ============================================================
    Forms
