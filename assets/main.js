@@ -77,4 +77,34 @@
       });
     });
   }
+
+  // Scroll reveal: sections fade/slide in once as they enter the
+  // viewport. The data-reveal hook and hiding class are both applied
+  // here in JS (never in the HTML), so a page with JS disabled or
+  // blocked never has its content hidden in the first place.
+  var revealTargets = document.querySelectorAll(
+    "main > section, main > .manifest, main > .strip"
+  );
+  if (revealTargets.length && "IntersectionObserver" in window) {
+    var toReveal = [];
+    revealTargets.forEach(function (el, i) {
+      if (i < 2) return; // leave the hero and the strip right below it visible immediately
+      el.classList.add("reveal-hidden");
+      toReveal.push(el);
+    });
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+    );
+    toReveal.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
 })();
