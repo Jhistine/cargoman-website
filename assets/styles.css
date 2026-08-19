@@ -20,7 +20,10 @@ html { scroll-behavior: smooth; }
   --orange:     #FF5722;  /* Primary Orange */
   --blue:       #00BDFF;  /* Accent Blue */
   --white:      #ffffff;
-  --green-deep: #006930;  /* derived — all readable text + footer background */
+  --green-deep: #006930;  /* derived — all readable text */
+  --footer-bg:  #0B7A3D;  /* derived — richer/brighter than --green-deep so the
+                              footer reads as the brand green rather than a
+                              near-black slab; still ~5.4:1 with white text */
 
   --dark:   var(--green-deep);  /* headings, nav, borders, large UI */
   --ink:    var(--green-deep);  /* footer / skip-link background, prominent labels */
@@ -479,7 +482,7 @@ footer a:focus-visible, footer button:focus-visible{
    the footer reads as a dense information block, not a large
    dark area with content floating inside it.
    ============================================================ */
-footer{ background: var(--ink); color: rgba(255,255,255,0.72); padding: 48px 0 24px; }
+footer{ background: var(--footer-bg); color: rgba(255,255,255,0.72); padding: 48px 0 24px; }
 .foot-grid{ display: grid; grid-template-columns: 1.4fr 0.85fr 1.3fr 0.85fr; gap: 32px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.12); }
 .foot-logo{ display: flex; align-items: center; gap: 9px; font-family: var(--font-head); font-weight: 700; font-size: 18px; color: #fff; margin-bottom: 12px; }
 .foot-logo img{ height: 26px; width: auto; }
@@ -488,7 +491,12 @@ footer{ background: var(--ink); color: rgba(255,255,255,0.72); padding: 48px 0 2
 .foot-by img{ height: 16px; width: auto; opacity: 0.9; }
 .foot-by a{ color: rgba(255,255,255,0.75); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
 .foot-by a:hover{ color: #fff; }
-footer h5{ font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.42); margin-bottom: 12px; font-weight: 700; }
+footer h5{
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.42);
+  margin-bottom: 12px; font-weight: 700;
+}
+footer h5::before{ content:""; width: 12px; height: 2px; background: var(--orange); border-radius: 2px; flex: 0 0 auto; }
 footer .foot-grid a{ display: block; font-size: 14px; color: rgba(255,255,255,0.72); margin-bottom: 9px; }
 footer .foot-grid a:hover{ color: #fff; }
 .foot-grid .foot-by a{ display: inline-flex; margin-bottom: 0; }
