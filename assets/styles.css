@@ -215,20 +215,21 @@ footer a:focus-visible, footer button:focus-visible{
 .hero-actions{ display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
 .hero-foot{ display: flex; gap: 0; flex-wrap: wrap; margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--border); }
 .hero-cap{
-  display: flex; align-items: flex-start; gap: 11px; flex: 1 1 150px;
-  padding: 8px 20px; margin: -8px 0; border-radius: 10px;
+  display: flex; align-items: center; gap: 13px; flex: 1 1 150px;
+  padding: 10px 20px; margin: -8px 0; border-radius: 10px;
   transition: background .18s ease, transform .18s ease;
 }
 .hero-cap:hover{ background: var(--offwhite); transform: translateY(-2px); }
 .hero-cap + .hero-cap{ border-left: 1px solid var(--border); }
 .hero-cap-icon{
-  width: 34px; height: 34px; border-radius: 9px; flex: 0 0 auto;
+  width: 40px; height: 40px; border-radius: 12px; flex: 0 0 auto;
   display: flex; align-items: center; justify-content: center;
-  background: var(--tint); color: var(--dark); border-bottom: 2px solid var(--orange);
-  transition: background .18s ease, color .18s ease;
+  background: var(--orange); color: #fff;
+  box-shadow: 0 1px 2px rgba(255,87,34,0.15);
+  transition: filter .18s ease;
 }
-.hero-cap:hover .hero-cap-icon{ background: var(--orange); color: #fff; border-bottom-color: var(--dark); }
-.hero-cap-icon svg{ width: 17px; height: 17px; }
+.hero-cap:hover .hero-cap-icon{ filter: brightness(1.08); }
+.hero-cap-icon svg{ width: 19px; height: 19px; }
 .hero-cap-label{ display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--dark); margin-bottom: 3px; }
 .hero-cap-desc{ display: block; font-size: 13px; color: var(--text-soft); line-height: 1.35; }
 @media (max-width: 560px){
