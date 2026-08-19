@@ -9,8 +9,11 @@
   var header = document.getElementById("site-header");
   if (header) {
     var onScroll = function () {
-      if (window.scrollY > 12) header.classList.add("compact");
-      else header.classList.remove("compact");
+      // Hysteresis (separate enter/exit thresholds) stops the class from
+      // flapping on/off when scrollY hovers near a single cutoff, which
+      // was making the header (and content below it) visibly jitter.
+      if (window.scrollY > 40) header.classList.add("compact");
+      else if (window.scrollY < 16) header.classList.remove("compact");
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

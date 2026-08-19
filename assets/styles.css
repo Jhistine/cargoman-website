@@ -159,8 +159,19 @@ footer a:focus-visible, footer button:focus-visible{
 }
 
 @media (max-width: 860px){
+  /* Header is a constant height on mobile (not the desktop 76px/62px
+     compact-on-scroll swap), so the fixed nav panel's top offset below
+     always matches the header's real height, whether or not the page
+     has been scrolled when the menu is opened. */
+  .nav-inner, #site-header.compact .nav-inner{ height: 62px; }
   .primary-nav{
-    position: fixed; inset: 62px 0 0 0; background: var(--white);
+    /* #site-header has backdrop-filter, which makes it the containing
+       block for this fixed-position descendant — so `bottom` would
+       resolve against the header's own short height, not the viewport.
+       An explicit vh-based height sidesteps that and always reaches
+       the real bottom of the screen. */
+    position: fixed; top: 62px; left: 0; right: 0; height: calc(100vh - 62px);
+    background: var(--white);
     flex-direction: column; align-items: stretch; gap: 0; padding: 8px 24px 24px;
     transform: translateY(-8px); opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease;
     overflow-y: auto;
@@ -361,7 +372,7 @@ footer a:focus-visible, footer button:focus-visible{
   background: var(--offwhite); border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
 }
-.card-shot img{ width: 100%; height: 100%; object-fit: contain; }
+.card-shot img{ width: 100%; height: 100%; object-fit: cover; }
 .card .tag{
   display: inline-block; font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
   color: var(--orange); background: rgba(255,87,34,0.1); padding: 4px 9px; border-radius: 5px; margin-bottom: 14px;
@@ -650,6 +661,83 @@ footer .foot-grid a:hover{ color: #fff; }
   display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700;
   background: rgba(255,87,34,0.08); color: var(--orange); border: 1px solid rgba(255,87,34,0.3);
   padding: 6px 12px; border-radius: 20px; margin-bottom: 18px;
+}
+
+/* ============================================================
+   Clients map — "Our Clients. Nationwide Impact." Data-driven
+   province list + interactive SA map, rendered by
+   assets/clients-map.js from assets/data/clients.js.
+   ============================================================ */
+.clients-layout{ display: grid; grid-template-columns: 0.82fr 1.4fr; gap: 40px; align-items: start; }
+
+.clients-list{ display: flex; flex-direction: column; gap: 22px; }
+.clients-group h3{
+  font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--dark);
+  margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+.clients-group ul{ display: flex; flex-direction: column; gap: 2px; }
+.clients-entry{
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  width: 100%; text-align: left; background: transparent; border: 1px solid transparent; border-radius: 7px;
+  padding: 7px 9px; font: inherit; color: var(--text);
+  transition: background .15s ease, border-color .15s ease;
+}
+.clients-entry:hover{ background: var(--tint); }
+.clients-entry .name{ font-size: 14px; font-weight: 600; color: var(--ink); }
+.clients-entry .loc{ font-size: 12px; color: var(--text-soft); text-align: right; flex: 0 0 auto; }
+.clients-entry.is-active{ background: #fff; border-color: var(--dark); box-shadow: var(--shadow-sm); }
+.clients-entry.is-active .name::before{ content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); margin-right: 7px; vertical-align: middle; }
+
+.clients-map-wrap{
+  position: relative; background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px; box-shadow: var(--shadow-sm);
+}
+.clients-map{ display: block; width: 100%; height: auto; }
+.map-outline{ fill: var(--offwhite); stroke: var(--border-strong); stroke-width: 1.4; stroke-linejoin: round; }
+.map-divider{ fill: none; stroke: var(--dark); stroke-opacity: 0.14; stroke-width: 1.1; stroke-linecap: round; }
+.map-label{
+  font-family: var(--font-mono); font-size: 16px; font-weight: 700; letter-spacing: 0.03em;
+  text-transform: uppercase; fill: var(--dark); opacity: 0.8; text-anchor: middle; pointer-events: none;
+}
+.map-label.is-muted{ font-size: 12.5px; font-weight: 600; opacity: 0.28; }
+
+.pin{ cursor: pointer; }
+.pin-hit{ fill: transparent; }
+.pin-halo{ fill: var(--orange); opacity: 0.16; transition: opacity .18s ease; }
+.pin-dot{
+  fill: var(--orange); stroke: #fff; stroke-width: 1.5;
+  transition: transform .15s ease, stroke .15s ease, stroke-width .15s ease;
+  transform-box: fill-box; transform-origin: center;
+}
+.pin:hover .pin-dot, .pin:focus-visible .pin-dot{ transform: scale(1.4); }
+.pin:hover .pin-halo, .pin:focus-visible .pin-halo{ opacity: 0.3; }
+.pin:focus-visible .pin-dot{ stroke: var(--dark); stroke-width: 2.5; }
+.pin.is-active .pin-dot{ transform: scale(1.4); stroke: var(--dark); stroke-width: 2.5; }
+.pin.is-active .pin-halo{ opacity: 0.34; }
+
+.client-tooltip{
+  position: absolute; left: 0; top: 0; z-index: 20; pointer-events: none; max-width: 220px;
+  background: #fff; border: 1px solid var(--border-strong); border-radius: 8px;
+  padding: 10px 14px; box-shadow: var(--shadow-md);
+  opacity: 0; transform: translate(-50%, -100%) translateY(-8px);
+  transition: opacity .15s ease, transform .15s ease;
+}
+.client-tooltip.is-visible{ opacity: 1; transform: translate(-50%, -100%) translateY(-12px); }
+.client-tooltip .t-name{ display: block; font-weight: 700; font-size: 13.5px; color: var(--ink); }
+.client-tooltip .t-loc{ display: block; font-size: 12.5px; color: var(--text-soft); margin-top: 1px; }
+.client-tooltip .t-province{
+  display: block; font-family: var(--font-mono); font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-soft); opacity: 0.75; margin-top: 5px;
+}
+
+@media (max-width: 900px){
+  .clients-layout{ grid-template-columns: 1fr; gap: 28px; }
+  .clients-map-wrap{ order: -1; padding: 16px; }
+}
+@media (max-width: 700px){
+  .map-label.is-muted{ display: none; }
+  .map-label{ font-size: 20px; }
 }
 
 /* ============================================================
