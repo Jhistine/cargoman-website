@@ -400,6 +400,20 @@ footer a:focus-visible, footer button:focus-visible{
 .cards.cards-2col{ grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; }
 @media (max-width: 620px){ .cards.cards-2col{ grid-template-columns: 1fr; } }
 
+/* Generic 2-column override for grids with an even item count.
+   Compound selectors (not just .grid-2col alone) so specificity beats
+   each grid's own base rule regardless of source order, and its own
+   mobile collapse rather than relying on (and fighting the
+   specificity of) each grid's native breakpoints. */
+.industries.grid-2col, .persona-grid.grid-2col, .value-grid.grid-2col{
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 640px){
+  .industries.grid-2col, .persona-grid.grid-2col, .value-grid.grid-2col{
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ============================================================
    Split layout (content + visual)
    ============================================================ */

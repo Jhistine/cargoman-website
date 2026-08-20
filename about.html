@@ -106,6 +106,12 @@
     <line x1="8.5" y1="12" x2="15.5" y2="12"/>
     <line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/>
   </symbol>
+  <symbol id="icon-sites" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="7" r="3"/>
+    <circle cx="18" cy="7" r="3"/>
+    <circle cx="12" cy="18" r="3"/>
+    <path d="M8.4 8.8L10.3 15.3M15.6 8.8L13.7 15.3M9 7h6" stroke-dasharray="2 2.4"/>
+  </symbol>
 </defs></svg>
 
 <header id="site-header">
@@ -133,27 +139,87 @@
     <div class="wrap">
       <p class="breadcrumb"><a href="index.html">Home</a> / About</p>
       <p class="eyebrow">About</p>
-      <h1>CargoMan Is Built by RapidDev.</h1>
-      <p class="lede">RapidDev is a South African software development company. CargoMan is our logistics execution platform, built for cargo terminals, warehouses, and weighbridge operations across the region.</p>
+      <h1>Built by People Who Understand Cargo Operations.</h1>
+      <p class="lede">CargoMan is developed by RapidDev, a South African software company that has spent years building and supporting operational systems for cargo terminals, warehouses, depots, mining logistics, and weighbridge environments.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap" style="max-width:640px; text-align:center;">
-      <p style="font-size:22px;font-weight:500;color:var(--dark);line-height:1.5;">CargoMan connects the gate, weighbridge, warehouse, mobile teams, and reporting into one operational record - built for the way cargo actually moves through a site, not adapted from generic inventory software.</p>
+      <p style="font-size:22px;font-weight:500;color:var(--dark);line-height:1.5;">CargoMan evolved from solving real operational problems alongside the people responsible for receiving, weighing, storing, packing, and dispatching cargo - not from adapting generic inventory software to an industrial site.</p>
     </div>
   </section>
 
   <section class="section section-tint">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">How we work</p>
-        <h2>Operationally Credible, Practical, and Direct.</h2>
+        <p class="eyebrow">Principles</p>
+        <h2>What Shapes How CargoMan Is Built.</h2>
       </div>
-      <div class="value-grid">
-        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div><h4>Operationally Credible</h4><p>CargoMan is shaped by real gate, weighbridge, and warehouse workflows - not theoretical inventory management.</p></div>
-        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div><h4>Confident and Direct</h4><p>We lead with the operational outcome, then explain the technology behind it.</p></div>
-        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-target"/></svg></div><h4>Practical and Grounded</h4><p>Configuration adapts to the realities of each site, while records stay structured and auditable.</p></div>
+      <div class="value-grid grid-2col">
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-user"/></svg></div><h4>Built With Operators</h4><p>CargoMan has evolved through real operational deployments and day-to-day use at working cargo sites.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-target"/></svg></div><h4>Configured Around the Site</h4><p>Different sites have different rules, equipment, terminology, and processes. CargoMan is configured around those realities while keeping operational data structured and auditable.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-shield"/></svg></div><h4>Supported by the Team Behind the Product</h4><p>Implementation and support are provided by people who understand both the software and the operational process it is being used to control.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-mountain"/></svg></div><h4>Built for Southern African Operating Conditions</h4><p>CargoMan is built with practical site realities in mind - including local infrastructure, intermittent connectivity, weighbridge environments, industrial hardware, and geographically distributed operations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION METHODOLOGY -->
+  <section class="section">
+    <div class="wrap" style="max-width:720px;">
+      <div class="section-head">
+        <p class="eyebrow">How we implement</p>
+        <h2>Start With the Operation, Not the Software.</h2>
+      </div>
+      <ol class="step-list">
+        <li><h4>Map the Operation</h4><p>Understand how trucks, cargo, documents, and information currently move through the site, including the points where control or reconciliation breaks down.</p></li>
+        <li><h4>Configure CargoMan</h4><p>Configure the relevant workflows, users, permissions, reference data, validation, reports, and integrations around the operation.</p></li>
+        <li><h4>Deploy in Stages</h4><p>Start with the control point that provides the most immediate value - such as gate, weighbridge, warehouse, or container operations - then extend the connected workflow.</p></li>
+        <li><h4>Extend the Platform</h4><p>Add additional workflows, integrations, and reporting as operational requirements mature.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- OPERATIONAL EXAMPLES -->
+  <section class="section section-tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Operational examples</p>
+        <h2>How CargoMan Applies to Different Operations.</h2>
+        <p>Illustrative patterns based on the kinds of operations CargoMan supports - not specific customer deployments.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <span class="tag">MINERAL LOGISTICS</span>
+          <h3>High-Volume Truck Receiving</h3>
+          <p>High-volume truck movements arrive from multiple origins with expected-truck information, origin references, and weight data that must be controlled at the destination.</p>
+          <ul class="mini-list">
+            <li>Pre-advice, gate, weighbridge, and receiving connected in sequence</li>
+            <li>Planned vs actual movement control</li>
+            <li>Traceable truck and weight history</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag">CONTAINER OPERATIONS</span>
+          <h3>Container Packing and Release</h3>
+          <p>Cargo receipts, stock, container packing, seals, photographs, signatures, and releases exist across separate records.</p>
+          <ul class="mini-list">
+            <li>Receiving, stock, and container allocation in one history</li>
+            <li>Cargo-to-container traceability through packing and seals</li>
+            <li>Evidence attached to the transaction, not a separate file</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="tag">MULTI-SITE OPERATIONS</span>
+          <h3>Distributed Warehouse and Depot Sites</h3>
+          <p>Sites execute locally while management needs consolidated visibility, consistent information, and resilient local operations.</p>
+          <ul class="mini-list">
+            <li>Local execution with central synchronisation</li>
+            <li>Consistent operational data across sites</li>
+            <li>Consolidated reporting, less manual spreadsheet work</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -191,7 +257,7 @@
     <div class="foot-grid">
       <div>
         <div class="foot-logo"><img src="assets/img/cargoman-mark.png" alt="" width="26" height="26">CargoMan</div>
-        <p class="foot-p">A logistics execution platform that connects gate control, weighbridge operations, warehouse workflows, mobile teams, evidence, and reporting.</p>
+        <p class="foot-p">CargoMan is an operational logistics platform connecting gate, weighbridge, warehouse, container, mobile, and reporting workflows from arrival to dispatch.</p>
         <p class="foot-by">Built by <a href="https://www.rapiddev.co.za"><img src="assets/img/rapiddev-mark.png" alt="" width="16" height="16">RapidDev</a></p>
       </div>
       <div>
