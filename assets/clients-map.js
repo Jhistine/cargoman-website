@@ -9,7 +9,6 @@
 
   if (!pinsLayer || !listEl || !tooltip || !wrapEl || typeof CARGOMAN_CLIENTS === "undefined") return;
 
-  var tName = tooltip.querySelector(".t-name");
   var tLoc = tooltip.querySelector(".t-loc");
   var tProvince = tooltip.querySelector(".t-province");
 
@@ -20,7 +19,6 @@
   function makeId(gi, ci) { return "c-" + gi + "-" + ci; }
 
   function showTooltip(pinEl, client, province) {
-    tName.textContent = client.name;
     tLoc.textContent = client.location;
     tProvince.textContent = province;
     var pinRect = pinEl.getBoundingClientRect();
@@ -80,15 +78,11 @@
       btn.type = "button";
       btn.className = "clients-entry";
       btn.id = "entry-" + id;
-      btn.setAttribute("aria-label", client.name + ", " + client.location + ", " + group.province);
+      btn.setAttribute("aria-label", client.location + ", " + group.province);
 
-      var nameEl = document.createElement("span");
-      nameEl.className = "name";
-      nameEl.textContent = client.name;
       var locEl = document.createElement("span");
       locEl.className = "loc";
       locEl.textContent = client.location;
-      btn.appendChild(nameEl);
       btn.appendChild(locEl);
 
       btn.addEventListener("click", function () { setActive(id); });
@@ -111,7 +105,7 @@
       g.setAttribute("class", "pin");
       g.setAttribute("tabindex", "0");
       g.setAttribute("role", "button");
-      g.setAttribute("aria-label", client.name + ", " + client.location + ", " + group.province);
+      g.setAttribute("aria-label", client.location + ", " + group.province);
       g.setAttribute("transform", "translate(" + client.x + "," + client.y + ")");
 
       var hit = document.createElementNS(SVG_NS, "circle");
