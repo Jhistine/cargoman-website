@@ -125,6 +125,12 @@
     <path d="M4 8.2A1.2 1.2 0 015.2 7H8l1.1-1.6h5.8L16 7h2.8A1.2 1.2 0 0120 8.2v10.6A1.2 1.2 0 0118.8 20H5.2A1.2 1.2 0 014 18.8z"/>
     <circle cx="12" cy="13" r="3.4"/>
   </symbol>
+  <symbol id="icon-sites" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="7" r="3"/>
+    <circle cx="18" cy="7" r="3"/>
+    <circle cx="12" cy="18" r="3"/>
+    <path d="M8.4 8.8L10.3 15.3M15.6 8.8L13.7 15.3M9 7h6" stroke-dasharray="2 2.4"/>
+  </symbol>
 </defs></svg>
 
 <header id="site-header">
@@ -154,7 +160,8 @@
       <div>
         <p class="eyebrow">Logistics execution platform</p>
         <h1>Control Every Cargo Movement, from Gate to Dispatch.</h1>
-        <p class="lede">CargoMan connects gate control, weighbridge operations, warehouse workflows, mobile teams, evidence, and reporting in one logistics execution platform.</p>
+        <p class="lede">CargoMan gives terminals, depots, warehouses, and weighbridge operations one operational record for every cargo movement - connecting the truck, order, weight, cargo, container, evidence, and dispatch as the operation happens.</p>
+        <p style="margin-top:10px;color:var(--text-soft);font-size:15.5px;font-weight:600;">Less re-capturing. Fewer disconnected spreadsheets. Full operational traceability.</p>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-primary">Book a demo</a>
           <a href="platform.html" class="btn btn-ghost on-light">Explore the platform</a>
@@ -170,15 +177,15 @@
       <div class="hero-foot">
         <div class="hero-cap">
           <div class="hero-cap-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div>
-          <div><span class="hero-cap-label">Web</span><span class="hero-cap-desc">Management &amp; reporting</span></div>
+          <div><span class="hero-cap-label">Web</span><span class="hero-cap-desc">Management, reporting &amp; administration</span></div>
         </div>
         <div class="hero-cap">
           <div class="hero-cap-icon"><svg viewBox="0 0 24 24"><use href="#icon-database"/></svg></div>
-          <div><span class="hero-cap-label">Desktop</span><span class="hero-cap-desc">Site-connected operations</span></div>
+          <div><span class="hero-cap-label">Desktop</span><span class="hero-cap-desc">High-intensity site operations &amp; hardware integration</span></div>
         </div>
         <div class="hero-cap">
           <div class="hero-cap-icon"><svg viewBox="0 0 24 24"><use href="#icon-mobile"/></svg></div>
-          <div><span class="hero-cap-label">Mobile</span><span class="hero-cap-desc">Scan-first capture</span></div>
+          <div><span class="hero-cap-label">Mobile</span><span class="hero-cap-desc">Scan-first execution at the point of activity</span></div>
         </div>
       </div>
     </div>
@@ -195,50 +202,88 @@
     </div>
   </div>
 
-  <!-- CONNECTED OPERATIONS / MANIFEST STRIP -->
+  <!-- OPERATIONAL GAPS -->
   <section class="manifest">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Where the gaps appear</p>
+        <h2>When Cargo Operations Grow, the Gaps Appear Between Systems.</h2>
+        <p>Cargo operations rarely fail because there is no software. They become difficult when each part of the operation records a different version of the same movement.</p>
+      </div>
+    </div>
+    <div class="workflow-grid" role="list" aria-label="Common operational gaps">
+      <div class="workflow-card" role="listitem">
+        <h4>The gate knows the truck arrived, but the warehouse does not.</h4>
+        <p>Arrival information is often captured separately from receiving or dispatch.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <h4>A weight is captured, but somebody still has to link it back to the order.</h4>
+        <p>Disconnected weighbridge records create manual reconciliation and incorrect allocations.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <h4>Warehouse transactions are recorded on paper and captured later.</h4>
+        <p>The system only reflects the operation after the fact.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <h4>Photos, signatures, and damage evidence sit outside the transaction.</h4>
+        <p>When a dispute occurs, operations has to reconstruct what happened from emails, phones, and folders.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <h4>Different sites maintain different versions of the same information.</h4>
+        <p>Central visibility arrives late because local operations depend on spreadsheets or isolated systems.</p>
+      </div>
+      <div class="workflow-card" role="listitem">
+        <h4>Discrepancies are discovered during reconciliation instead of during execution.</h4>
+        <p>The problem is found after the cargo has already moved.</p>
+      </div>
+    </div>
+    <div class="wrap"><p class="tape-note">CargoMan connects these handovers into one controlled operational process.</p></div>
+  </section>
+
+  <!-- CONNECTED OPERATIONS / MANIFEST STRIP -->
+  <section class="manifest section-tint">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">One platform across the movement</p>
         <h2>The Same Record, from First Arrival to Final Dispatch.</h2>
-        <p>Every stage below writes to one connected operational record - not several separate systems that need reconciling at month end.</p>
+        <p>A truck arriving at the gate should not create an isolated gate record. The same movement can continue through weighing, receiving, stock, packing, evidence, and dispatch while retaining its operational context throughout.</p>
       </div>
     </div>
     <div class="workflow-grid" role="list" aria-label="CargoMan operational workflow">
       <div class="workflow-card" role="listitem">
         <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-document"/></svg></div>
         <h4>Plan the Movement</h4>
-        <p>Orders, booking references, cargo detail and expected trucks, captured before the vehicle arrives.</p>
+        <p>Create or import the order, booking reference, cargo allocation, expected truck, or other pre-advice information before the vehicle reaches the site.</p>
       </div>
       <div class="workflow-card" role="listitem">
         <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div>
         <h4>Control Arrival</h4>
-        <p>Identify vehicle, driver, transporter and client, and record entry and security checks at the gate.</p>
+        <p>Match the arriving vehicle to the expected movement, confirm the driver and transporter, complete site checks, and record entry.</p>
       </div>
       <div class="workflow-card" role="listitem">
         <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div>
         <h4>Capture Weight</h4>
-        <p>Process weighbridge transactions, prevent duplicate tickets, and link readings to the right record.</p>
+        <p>Capture gross, tare, and nett values from the correct weighbridge transaction and associate the reading with the vehicle, order, cargo, or container it belongs to.</p>
       </div>
       <div class="workflow-card" role="listitem">
         <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div>
         <h4>Receive &amp; Handle</h4>
-        <p>Scan barcodes, allocate lots and orders, and record quantities, weights and damages.</p>
+        <p>Receive cargo against the correct order, capture quantities and weights, allocate lots or barcodes, record damage, and maintain stock as the operation happens.</p>
       </div>
       <div class="workflow-card" role="listitem">
         <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-container"/></svg></div>
         <h4>Store &amp; Pack</h4>
-        <p>Allocate warehouse zones, control stock status, and manage packing workflows through to release.</p>
+        <p>Track cargo through storage and packing, including stock status, container allocation, seals, and supporting evidence where required.</p>
       </div>
       <div class="workflow-card" role="listitem">
         <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-truck"/></svg></div>
         <h4>Release &amp; Dispatch</h4>
-        <p>Validate the movement, confirm items, capture final weights or container status, and record exit.</p>
+        <p>Validate what is leaving, confirm the cargo or container, capture final operational information, and complete the dispatch or exit movement.</p>
       </div>
       <div class="workflow-card full" role="listitem">
         <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div>
         <h4>Monitor &amp; Report</h4>
-        <p>Live status, stock balances, throughput and audit history - with the transaction evidence behind it.</p>
+        <p>See live status, stock movement, balances, throughput, and audit history, with the underlying transaction and evidence available for investigation.</p>
       </div>
     </div>
     <div class="wrap"><p class="tape-note">Not every deployment uses every stage - CargoMan is configured around the operation, not the other way around.</p>
@@ -250,32 +295,33 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Core solutions</p>
-        <h2>Six Connected Modules. One Operational Record.</h2>
+        <h2>Operational Solutions Connected by One Platform.</h2>
+        <p>Deploy the parts of CargoMan your operation needs today, while keeping each movement connected through the same operational platform.</p>
       </div>
       <div class="cards">
         <div class="card">
           <div class="card-shot"><img src="assets/img/screenshots/gate-access-control-photo.png" alt="Security officer scanning a truck's registration plate with a handheld device at a site gate."></div>
-          <span class="tag">GATE</span><h3>Gate &amp; Access Control</h3><p>Match expected movements, record arrivals and entry, and maintain a clear view of vehicles and people on site.</p><a href="solutions.html#gate" class="go">See gate control <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <span class="tag">GATE</span><h3>Gate &amp; Access Control</h3><p>Know who and what is expected before it arrives. Match trucks to pre-advised movements, complete entry checks, and maintain a live view of vehicles and people on site.</p><a href="solutions.html#gate" class="go">See gate control <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </div>
         <div class="card">
           <div class="card-shot"><img src="assets/img/screenshots/weighbridge-photo.png" alt="Operator reviewing a weighbridge ticket on screen, showing gross, tare, and nett weight, with the truck visible on the scale outside."></div>
-          <span class="tag">WEIGHBRIDGE</span><h3>Weighbridge Operations</h3><p>Connect accurate weight capture to the right vehicle, cargo, order, and transaction.</p><a href="solutions.html#weighbridge" class="go">See weighbridge <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <span class="tag">WEIGHBRIDGE</span><h3>Weighbridge Operations</h3><p>Capture the right weight against the right truck, order, booking, cargo, or container - with controlled weighing sequences, validation, and complete transaction history.</p><a href="solutions.html#weighbridge" class="go">See weighbridge <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </div>
         <div class="card">
           <div class="card-shot"><img src="assets/img/screenshots/warehouse-stock-photo.png" alt="Worker scanning a wrapped pallet with a handheld scanner outside a warehouse receiving and dispatch bay, with a forklift moving stock inside."></div>
-          <span class="tag">WAREHOUSE</span><h3>Warehouse &amp; Stock</h3><p>Control receiving, storage, packing, and dispatch with order-, lot-, item-, and barcode-level traceability.</p><a href="solutions.html#warehouse" class="go">See warehouse <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <span class="tag">WAREHOUSE</span><h3>Warehouse &amp; Stock</h3><p>Know what you received, what you still hold, and exactly what left - with traceability from order and lot down to item or barcode where required.</p><a href="solutions.html#warehouse" class="go">See warehouse <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </div>
         <div class="card">
           <div class="card-shot"><img src="assets/img/screenshots/container-lifecycle-photo.png" alt="Worker checking a shipping container's cargo and seal details against a clipboard at the rear doors of a truck, with stacked containers in the yard behind."></div>
-          <span class="tag">CONTAINERS</span><h3>Container Lifecycle</h3><p>Track configurable container movements, packed cargo, seals, vehicles, photos, and signatures in one history.</p><a href="solutions.html#containers" class="go">See containers <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <span class="tag">CONTAINERS</span><h3>Container Operations</h3><p>Connect the container, cargo, vehicle, seal, weight, and evidence through each configured container movement.</p><a href="solutions.html#containers" class="go">See containers <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </div>
         <div class="card">
           <div class="card-shot"><img src="assets/img/screenshots/mobile-offline-photo.png" alt="Operator using a rugged handheld device to complete a check-in checklist with photo and signature capture, with container loading underway in the background."></div>
-          <span class="tag">MOBILE</span><h3>Mobile &amp; Offline Execution</h3><p>Put scan-first capture, validation, photos, damages, and signatures in the hands of the operating team.</p><a href="solutions.html#mobile" class="go">See mobile <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <span class="tag">MOBILE</span><h3>Mobile &amp; Offline Execution</h3><p>Cargo work happens at the gate, in the yard, and beside the container - not behind a desk. Supported workflows continue offline and synchronise when connected.</p><a href="solutions.html#mobile" class="go">See mobile <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </div>
         <div class="card">
           <div class="card-shot"><img src="assets/img/screenshots/reporting-integration-photo.png" alt="Operator reviewing a reporting dashboard with transaction counts, weight summary, and compliance charts on a desktop monitor in a site office, with a truck visible through the window."></div>
-          <span class="tag">REPORTING</span><h3>Reporting &amp; Integration</h3><p>Turn operational records into dashboards, documents, exports, and controlled data exchange.</p><a href="solutions.html#reporting" class="go">See reporting <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <span class="tag">REPORTING</span><h3>Reporting &amp; Analytics</h3><p>Reporting is generated from the same transactions used to run the operation, reducing the gap between what happened on site and what management sees afterwards.</p><a href="solutions.html#reporting" class="go">See reporting <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </div>
       </div>
     </div>
@@ -287,13 +333,14 @@
       <div>
         <p class="eyebrow">Traceability &amp; evidence</p>
         <h2>Know What Happened - and Prove It.</h2>
-        <p style="margin-top:16px;color:var(--text-soft);font-size:16px;">Photos, signatures, damage notes and documents attach to the transaction itself, captured from the yard, gate, or warehouse floor - not reconstructed from a separate trail afterwards.</p>
+        <p style="margin-top:16px;color:var(--text-soft);font-size:16px;">When a weight, quantity, dispatch, or damage is questioned, the answer should not depend on finding a WhatsApp photo, paper form, or email trail. CargoMan keeps the supporting operational evidence with the transaction it belongs to.</p>
         <ul class="feature-list">
           <li>Item-, lot-, order-, and barcode-level chain of custody</li>
           <li>Scan-first capture that works where the work happens</li>
           <li>Mandatory or contextual photo and signature capture</li>
           <li>Offline-capable workflows that synchronise when connected</li>
         </ul>
+        <p style="margin-top:20px;font-weight:700;color:var(--dark);">When something does not add up, follow the record.</p>
       </div>
       <div class="split-visual" style="align-self:stretch;">
         <img style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);" src="assets/img/screenshots/evidence-capture-scene.png" alt="Isometric illustration of an operator scanning boxes at an open container, with photo, damage, signature, and document evidence captured as verified checklist items.">
@@ -306,32 +353,32 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Platform benefits</p>
-        <h2>Built to Stay Connected, Visible, and Under Control.</h2>
+        <h2>Built for Operations That Cannot Stop.</h2>
       </div>
       <div class="benefit-grid">
         <div class="benefit-card">
           <div class="benefit-icon"><svg viewBox="0 0 24 24"><use href="#icon-database"/></svg></div>
-          <h4>One Operational Record</h4><p>Gate, weighbridge, warehouse, mobile, and reporting activity share one connected record.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><use href="#icon-search"/></svg></div>
-          <h4>Gate-to-Dispatch Visibility</h4><p>Move from a filtered list straight down to the transaction behind it, without leaving the platform.</p>
+          <h4>One Operational Record</h4><p>Keep the vehicle, order, weight, cargo, container, stock, and evidence connected through the physical operation.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon"><svg viewBox="0 0 24 24"><use href="#icon-target"/></svg></div>
-          <h4>Detailed Traceability</h4><p>Trace movements at order, lot, transaction, weight, container, and item level.</p>
+          <h4>Control the Handovers</h4><p>Validate the movement as it passes from gate to weighbridge, warehouse, container operation, and dispatch.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon"><svg viewBox="0 0 24 24"><use href="#icon-shield"/></svg></div>
-          <h4>Offline-Capable Operations</h4><p>Supported workflows continue on site and synchronise when connectivity returns.</p>
+          <h4>Site-Resilient Operation</h4><p>Supported workflows can continue locally and synchronise when connectivity returns.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><use href="#icon-sites"/></svg></div>
+          <h4>Multi-Site Visibility</h4><p>Execute locally while maintaining central visibility and reporting across distributed operations.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon"><svg viewBox="0 0 24 24"><use href="#icon-camera"/></svg></div>
-          <h4>Evidence by Design</h4><p>Photos, signatures, and documents live alongside the transaction, not in a separate trail.</p>
+          <h4>Evidence by Design</h4><p>Photos, signatures, damage notes, and documents remain attached to the transaction that created them.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon"><svg viewBox="0 0 24 24"><use href="#icon-link"/></svg></div>
-          <h4>Configurable Integration</h4><p>Controlled APIs, OData-style queries, and SQL views fit CargoMan into the systems around it.</p>
+          <h4>Fits Around Existing Systems</h4><p>APIs, controlled queries, SQL views, and purpose-built integrations connect CargoMan to the systems around it.</p>
         </div>
       </div>
     </div>
@@ -345,10 +392,10 @@
         <h2>Built for Real Cargo Sites.</h2>
       </div>
       <div class="industries">
-        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div><h4>Terminals &amp; Depots</h4><p>Coordinate trucks, cargo, weighing, storage, and dispatch through one connected workflow.</p></div>
-        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div><h4>Warehouses</h4><p>Maintain item, lot, order, and evidence-based control from receiving through to dispatch.</p></div>
-        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-mountain"/></svg></div><h4>Mining Logistics</h4><p>Track expected movements, origin data, weights, and site handovers with a clear record.</p></div>
-        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-container"/></svg></div><h4>Container Operations</h4><p>Connect container events to cargo, trucks, seals, photos, and signatures in one history.</p></div>
+        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div><h4>Terminals &amp; Depots</h4><p>Coordinate expected trucks, gate entry, weighing, storage, and dispatch through one connected workflow.</p></div>
+        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div><h4>Warehouses</h4><p>Maintain a live record of what was received, what remains in stock, and what was dispatched.</p></div>
+        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-mountain"/></svg></div><h4>Mining Logistics</h4><p>Connect pre-advised movements, weighbridge capture, and site handovers into an auditable history.</p></div>
+        <div class="ind-card"><div class="ind-icon"><svg viewBox="0 0 24 24"><use href="#icon-container"/></svg></div><h4>Container Operations</h4><p>Track full-in, packing, seals, and full-out as one configurable container lifecycle.</p></div>
       </div>
       <p style="margin-top:28px;"><a href="industries.html" class="btn btn-ghost on-light">See all industries</a></p>
     </div>
@@ -399,7 +446,7 @@
     <div class="wrap">
       <p class="eyebrow" style="justify-content:center;">Talk to CargoMan</p>
       <h2>Let's Map CargoMan to Your Operation.</h2>
-      <p>Show us how cargo moves through your site, and we'll demonstrate how CargoMan can connect the process.</p>
+      <p>Show us how trucks, cargo, and information move through your site. We'll map the control points and demonstrate where CargoMan can connect the process.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-primary">Book a demo</a>
         <a href="solutions.html" class="btn btn-ghost on-light">Discuss your operation</a>
@@ -430,7 +477,8 @@
         <a href="solutions.html#warehouse">Warehouse &amp; stock</a>
         <a href="solutions.html#containers">Containers</a>
         <a href="solutions.html#mobile">Mobile &amp; offline</a>
-        <a href="solutions.html#reporting">Reporting &amp; integration</a>
+        <a href="solutions.html#reporting">Reporting &amp; analytics</a>
+        <a href="solutions.html#integration">Integration</a>
       </div>
       <div>
         <h5>COMPANY</h5>
