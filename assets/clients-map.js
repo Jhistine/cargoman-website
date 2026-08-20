@@ -3,17 +3,15 @@
 
   var SVG_NS = "http://www.w3.org/2000/svg";
   var pinsLayer = document.getElementById("clients-pins");
-  var listEl = document.getElementById("clients-list");
   var tooltip = document.getElementById("client-tooltip");
   var wrapEl = document.getElementById("clients-map-wrap");
 
-  if (!pinsLayer || !listEl || !tooltip || !wrapEl || typeof CARGOMAN_CLIENTS === "undefined") return;
+  if (!pinsLayer || !tooltip || !wrapEl || typeof CARGOMAN_CLIENTS === "undefined") return;
 
   var tLoc = tooltip.querySelector(".t-loc");
   var tProvince = tooltip.querySelector(".t-province");
 
-  var pins = {};    // id -> { el, client, province }
-  var entries = {}; // id -> button element
+  var pins = {}; // id -> { el, client, province }
   var activeId = null;
 
   function makeId(gi, ci) { return "c-" + gi + "-" + ci; }
@@ -44,57 +42,17 @@
   function setActive(id) {
     if (activeId === id) {
       if (pins[activeId]) pins[activeId].el.classList.remove("is-active");
-      if (entries[activeId]) entries[activeId].classList.remove("is-active");
       activeId = null;
       hideTooltip();
       return;
     }
-    if (activeId) {
-      if (pins[activeId]) pins[activeId].el.classList.remove("is-active");
-      if (entries[activeId]) entries[activeId].classList.remove("is-active");
-    }
+    if (activeId && pins[activeId]) pins[activeId].el.classList.remove("is-active");
     activeId = id;
     var pin = pins[id];
     pin.el.classList.add("is-active");
-    entries[id].classList.add("is-active");
     pinsLayer.appendChild(pin.el); // paint on top of other pins
     showTooltip(pin.el, pin.client, pin.province);
   }
-
-  // ---- Build the client list (grouped by province) ----
-  CARGOMAN_CLIENTS.forEach(function (group, gi) {
-    var groupEl = document.createElement("div");
-    groupEl.className = "clients-group";
-
-    var h3 = document.createElement("h3");
-    h3.textContent = group.province;
-    groupEl.appendChild(h3);
-
-    var ul = document.createElement("ul");
-    group.clients.forEach(function (client, ci) {
-      var id = makeId(gi, ci);
-      var li = document.createElement("li");
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "clients-entry";
-      btn.id = "entry-" + id;
-      btn.setAttribute("aria-label", client.location + ", " + group.province);
-
-      var locEl = document.createElement("span");
-      locEl.className = "loc";
-      locEl.textContent = client.location;
-      btn.appendChild(locEl);
-
-      btn.addEventListener("click", function () { setActive(id); });
-
-      li.appendChild(btn);
-      ul.appendChild(li);
-      entries[id] = btn;
-    });
-
-    groupEl.appendChild(ul);
-    listEl.appendChild(groupEl);
-  });
 
   // ---- Build the map pins ----
   CARGOMAN_CLIENTS.forEach(function (group, gi) {
@@ -141,10 +99,10 @@
     });
   });
 
-  // Click outside the map/list, or Escape, clears the active selection.
+  // Click outside the map, or Escape, clears the active selection.
   document.addEventListener("click", function (e) {
     if (!activeId) return;
-    if (wrapEl.contains(e.target) || listEl.contains(e.target)) return;
+    if (wrapEl.contains(e.target)) return;
     setActive(activeId);
   });
   document.addEventListener("keydown", function (e) {
