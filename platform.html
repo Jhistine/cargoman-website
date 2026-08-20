@@ -106,6 +106,12 @@
     <line x1="8.5" y1="12" x2="15.5" y2="12"/>
     <line x1="8.5" y1="15.5" x2="15.5" y2="15.5"/>
   </symbol>
+  <symbol id="icon-sites" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="7" r="3"/>
+    <circle cx="18" cy="7" r="3"/>
+    <circle cx="12" cy="18" r="3"/>
+    <path d="M8.4 8.8L10.3 15.3M15.6 8.8L13.7 15.3M9 7h6" stroke-dasharray="2 2.4"/>
+  </symbol>
 </defs></svg>
 
 <header id="site-header">
@@ -114,7 +120,6 @@
     <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <a href="platform.html" aria-current="page">Platform</a>
       <a href="solutions.html">Solutions</a>
-      <a href="industries.html">Industries</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -143,9 +148,7 @@
     <div class="wrap" style="max-width:780px;text-align:center;">
       <p class="eyebrow" style="justify-content:center;">What CargoMan controls</p>
       <h2>CargoMan Controls What Actually Happens on Site.</h2>
-      <p style="margin-top:16px;color:var(--text-soft);font-size:16.5px;">Your ERP may know what was ordered. Your accounting system knows what was invoiced. Your transport system may know what was planned.</p>
-      <p style="margin-top:14px;color:var(--text-soft);font-size:16.5px;">CargoMan controls what actually happens on site - who arrived, what was weighed, what was received, where cargo was handled, what was packed, what left, and what evidence supports the movement.</p>
-      <p style="margin-top:14px;color:var(--text-soft);font-size:16.5px;">CargoMan can integrate with upstream and downstream systems while providing the operational control layer between planning and physical execution.</p>
+      <p style="margin-top:16px;color:var(--text-soft);font-size:16.5px;">Your ERP knows what was ordered. CargoMan controls what actually happened - who arrived, what was weighed, what was received, and what left - while integrating with the systems around it.</p>
     </div>
   </section>
 
@@ -162,43 +165,43 @@
           <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-document"/></svg></div>
           <span class="solution-num">1 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
           <h4>Plan the Movement</h4>
-          <p>Create orders, booking references, order lines, cargo details, expected trucks, and other pre-advice information.</p>
+          <p>Orders, booking references, cargo details, and expected trucks, captured before arrival.</p>
         </div>
         <div class="persona-card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-gate"/></svg></div>
           <span class="solution-num">2 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
           <h4>Control Arrival</h4>
-          <p>Identify the vehicle, driver, transporter, client, and expected movement at the gate, with entry and security checks recorded.</p>
+          <p>Identify the vehicle, driver, and transporter at the gate, with entry checks recorded.</p>
         </div>
         <div class="persona-card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-scale"/></svg></div>
           <span class="solution-num">3 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
           <h4>Capture Weight</h4>
-          <p>Process weighbridge transactions, collect gross/tare/nett values, and associate the reading with the correct record.</p>
+          <p>Process weighbridge transactions and link the reading to the correct record.</p>
         </div>
         <div class="persona-card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-warehouse"/></svg></div>
           <span class="solution-num">4 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
           <h4>Execute the Warehouse or Yard Operation</h4>
-          <p>Receive cargo, scan or assign barcodes, allocate lots and orders, record quantities and weights, and pack containers.</p>
+          <p>Receive cargo, scan barcodes, allocate lots, and record quantities and weights.</p>
         </div>
         <div class="persona-card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-shield"/></svg></div>
           <span class="solution-num">5 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
           <h4>Capture Proof</h4>
-          <p>Photos, signatures, documents, timestamps, users, and exceptions are recorded alongside the transaction itself.</p>
+          <p>Photos, signatures, and documents recorded alongside the transaction itself.</p>
         </div>
         <div class="persona-card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-truck"/></svg></div>
           <span class="solution-num">6 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
           <h4>Release and Dispatch</h4>
-          <p>Validate the movement, confirm items, capture final weights or container status, and record exit.</p>
+          <p>Validate the movement, confirm items, and record exit.</p>
         </div>
         <div class="persona-card" style="grid-column:1 / -1;">
           <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-chart"/></svg></div>
           <span class="solution-num">7</span>
           <h4>Monitor and Report</h4>
-          <p style="max-width:60ch;">View live status, stock movement, balances, throughput, KPIs, client-specific information, audit history, and supporting transaction documents.</p>
+          <p style="max-width:60ch;">Live status, stock movement, throughput, and audit history, with supporting documents.</p>
         </div>
       </div>
     </div>
@@ -254,88 +257,36 @@
     </div>
   </section>
 
-  <!-- MULTI-SITE -->
-  <section class="section">
-    <div class="wrap" style="max-width:780px;text-align:center;">
-      <p class="eyebrow" style="justify-content:center;">Multi-site operation</p>
-      <h2>Run Each Site Locally. See the Operation Centrally.</h2>
-      <p style="margin-top:16px;color:var(--text-soft);font-size:16.5px;">CargoMan can support geographically distributed operations while maintaining site-level execution and central visibility. Relevant operational data can synchronise between locations so local teams can continue working without turning every site into an isolated system.</p>
-      <p style="margin-top:14px;color:var(--text-soft);font-size:16.5px;">This allows a group to standardise operational records and reporting while still configuring workflows around the realities of individual sites.</p>
-    </div>
-  </section>
-
   <!-- INTEGRATION LAYER -->
   <section class="section-dark" style="padding:88px 0;">
     <div class="wrap" style="margin-bottom:44px;">
       <p class="eyebrow">Integration layer</p>
       <h2>CargoMan Fits Around the Systems You Already Use.</h2>
-      <p style="margin-top:16px;color:var(--slate-light);font-size:16px;max-width:60ch;">CargoMan does not need to replace your ERP, accounting platform, customer system, or existing planning tools. Operational instructions and master data can be brought into CargoMan, while completed movements and reporting data can be exposed or sent to other systems where required.</p>
+      <p style="margin-top:16px;color:var(--slate-light);font-size:16px;max-width:60ch;">CargoMan does not need to replace your ERP or accounting platform. Operational instructions can be brought in, while completed movements and reporting data can be exposed to other systems.</p>
     </div>
     <div class="integration">
-      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-search"/></svg><span class="k">ODATA-STYLE QUERYING</span><p>Authenticated querying for filtering, sorting, selecting, and retrieving operational records.</p></div>
-      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-link"/></svg><span class="k">PURPOSE-BUILT ENDPOINTS</span><p>REST endpoints for business processes that don't fit a generic data query.</p></div>
+      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-search"/></svg><span class="k">ODATA-STYLE QUERYING</span><p>Authenticated querying for filtering, sorting, and retrieving records.</p></div>
+      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-link"/></svg><span class="k">PURPOSE-BUILT ENDPOINTS</span><p>REST endpoints for processes that don't fit a generic query.</p></div>
       <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-lock"/></svg><span class="k">INTEGRATION USERS</span><p>Role-based integration users with token-secured access.</p></div>
-      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-database"/></svg><span class="k">SQL VIEWS</span><p>Database-level reporting or exchange where that is the best fit.</p></div>
-    </div>
-    <div class="wrap" style="margin-top:20px;">
-      <p style="color:var(--slate-light);font-size:14.5px;">CargoMan can also post configured operational data to a customer-owned endpoint, with site- or project-specific integration where needed.</p>
+      <div class="int-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:10px;color:var(--lime);"><use href="#icon-database"/></svg><span class="k">SQL VIEWS</span><p>Database-level reporting or exchange where that's the best fit.</p></div>
     </div>
   </section>
 
-  <!-- CONTROL POINTS -->
-  <section class="section">
-    <div class="wrap" style="max-width:780px;text-align:center;">
-      <p class="eyebrow" style="justify-content:center;">Control points</p>
-      <h2>CargoMan Doesn't Just Record the Movement. It Controls the Handovers.</h2>
-      <p style="margin-top:16px;color:var(--text-soft);font-size:16.5px;">Each stage can validate what should happen next before the movement progresses. Rules can be configured around the requirements of the site while keeping the operational record structured and auditable.</p>
-      <p style="margin-top:24px;font-family:var(--font-mono);font-size:13px;color:var(--dark);font-weight:700;letter-spacing:0.02em;">Expected truck → Gate validation → Weighbridge transaction → Receiving confirmation → Packing / stock validation → Dispatch validation</p>
-    </div>
-  </section>
-
-  <!-- CONFIGURATION -->
-  <section class="section section-tint">
-    <div class="wrap" style="max-width:780px;text-align:center;">
-      <p class="eyebrow" style="justify-content:center;">Configuration, not rebuilds</p>
-      <h2>One Platform, Configured for Different Operations.</h2>
-      <p style="margin-top:16px;color:var(--text-soft);font-size:16.5px;">CargoMan uses a common platform with configurable workflows, permissions, fields, validation, reports, and integrations. Individual sites can operate differently without turning every deployment into a completely separate system.</p>
-    </div>
-  </section>
-
-  <!-- HARDWARE INTEGRATION -->
-  <section class="section">
-    <div class="wrap" style="max-width:780px;text-align:center;">
-      <p class="eyebrow" style="justify-content:center;">Hardware integration</p>
-      <h2>Connect the Software to the Physical Operation.</h2>
-      <p style="margin-top:16px;color:var(--text-soft);font-size:16.5px;">CargoMan can integrate with weighbridge equipment, scanners, printers, and site-specific operational hardware where required, allowing information to be captured as part of the live workflow instead of re-entered afterwards.</p>
-    </div>
-  </section>
-
-  <!-- SECURITY & ACCESS -->
+  <!-- ALSO BUILT IN -->
   <section class="section section-tint">
     <div class="wrap">
-      <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto;">
-        <p class="eyebrow" style="justify-content:center;">Security &amp; access</p>
-        <h2>Give Each User the Access Their Role Requires.</h2>
+      <div class="section-head">
+        <p class="eyebrow">Also built in</p>
+        <h2>Multi-Site, Control, and Configuration.</h2>
       </div>
-      <ul class="capability-grid" style="max-width:820px;margin:0 auto;">
-        <li>Role-based permissions</li>
-        <li>Site-level access</li>
-        <li>Client-restricted views</li>
-        <li>Controlled integration users</li>
-        <li>Authenticated APIs</li>
-        <li>Audit history</li>
-        <li>Structured transaction ownership</li>
-        <li>Customer-specific visibility</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FINANCE / COMMERCIAL -->
-  <section class="section">
-    <div class="wrap" style="max-width:780px;text-align:center;">
-      <p class="eyebrow" style="justify-content:center;">Finance &amp; commercial</p>
-      <h2>Turn Operational Activity Into Billable Evidence.</h2>
-      <p style="margin-top:16px;color:var(--text-soft);font-size:16.5px;">Storage periods, handling movements, weights, and supporting operational records can provide the basis for customer charges, invoice support, and commercial reconciliation where configured.</p>
+      <div class="value-grid">
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-sites"/></svg></div><h4>Multi-Site Operation</h4><p>Run each site locally while management sees the operation centrally, with consolidated reporting across locations.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-target"/></svg></div><h4>Control the Handovers</h4><p>Each stage validates what should happen next, from gate to weighbridge, receiving, and dispatch.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-lock"/></svg></div><h4>Configuration, Not Rebuilds</h4><p>Workflows, permissions, and validation rules adapt to the site without turning every deployment into separate software.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-truck"/></svg></div><h4>Hardware Integration</h4><p>Connects to weighbridge equipment, scanners, and printers, so information is captured as part of the live workflow.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-shield"/></svg></div><h4>Security &amp; Access</h4><p>Role-based permissions, site-level access, and audit history on every transaction.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-document"/></svg></div><h4>Billable Evidence</h4><p>Storage periods, movements, and weights can support customer charges and invoice reconciliation.</p></div>
+      </div>
     </div>
   </section>
 
@@ -384,7 +335,6 @@
         <h5>PLATFORM</h5>
         <a href="platform.html">Overview</a>
         <a href="solutions.html">Solutions</a>
-        <a href="industries.html">Industries</a>
       </div>
       <div>
         <h5>SOLUTIONS</h5>

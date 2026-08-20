@@ -120,7 +120,6 @@
     <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <a href="platform.html">Platform</a>
       <a href="solutions.html">Solutions</a>
-      <a href="industries.html">Industries</a>
       <a href="about.html" aria-current="page">About</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -145,82 +144,33 @@
   </section>
 
   <section class="section">
-    <div class="wrap" style="max-width:640px; text-align:center;">
-      <p style="font-size:22px;font-weight:500;color:var(--dark);line-height:1.5;">CargoMan evolved from solving real operational problems alongside the people responsible for receiving, weighing, storing, packing, and dispatching cargo - not from adapting generic inventory software to an industrial site.</p>
-    </div>
-  </section>
-
-  <section class="section section-tint">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Principles</p>
         <h2>What Shapes How CargoMan Is Built.</h2>
       </div>
       <div class="value-grid grid-2col">
-        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-user"/></svg></div><h4>Built With Operators</h4><p>CargoMan has evolved through real operational deployments and day-to-day use at working cargo sites.</p></div>
-        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-target"/></svg></div><h4>Configured Around the Site</h4><p>Different sites have different rules, equipment, terminology, and processes. CargoMan is configured around those realities while keeping operational data structured and auditable.</p></div>
-        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-shield"/></svg></div><h4>Supported by the Team Behind the Product</h4><p>Implementation and support are provided by people who understand both the software and the operational process it is being used to control.</p></div>
-        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-mountain"/></svg></div><h4>Built for Southern African Operating Conditions</h4><p>CargoMan is built with practical site realities in mind - including local infrastructure, intermittent connectivity, weighbridge environments, industrial hardware, and geographically distributed operations.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-user"/></svg></div><h4>Built With Operators</h4><p>Evolved through real operational deployments and day-to-day use at working cargo sites.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-target"/></svg></div><h4>Configured Around the Site</h4><p>Every site has different rules and equipment - CargoMan is configured around those realities.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-shield"/></svg></div><h4>Supported by the Team Behind the Product</h4><p>Implementation and support come from people who understand the operation, not just the software.</p></div>
+        <div class="value-card"><div class="card-icon"><svg viewBox="0 0 24 24"><use href="#icon-mountain"/></svg></div><h4>Built for Southern African Conditions</h4><p>Practical site realities in mind, including local infrastructure and intermittent connectivity.</p></div>
       </div>
     </div>
   </section>
 
   <!-- IMPLEMENTATION METHODOLOGY -->
-  <section class="section">
+  <section class="section section-tint">
     <div class="wrap" style="max-width:720px;">
       <div class="section-head">
         <p class="eyebrow">How we implement</p>
         <h2>Start With the Operation, Not the Software.</h2>
       </div>
       <ol class="step-list">
-        <li><h4>Map the Operation</h4><p>Understand how trucks, cargo, documents, and information currently move through the site, including the points where control or reconciliation breaks down.</p></li>
-        <li><h4>Configure CargoMan</h4><p>Configure the relevant workflows, users, permissions, reference data, validation, reports, and integrations around the operation.</p></li>
-        <li><h4>Deploy in Stages</h4><p>Start with the control point that provides the most immediate value - such as gate, weighbridge, warehouse, or container operations - then extend the connected workflow.</p></li>
-        <li><h4>Extend the Platform</h4><p>Add additional workflows, integrations, and reporting as operational requirements mature.</p></li>
+        <li><h4>Map the Operation</h4><p>Understand how trucks, cargo, and information currently move through the site.</p></li>
+        <li><h4>Configure CargoMan</h4><p>Set up the relevant workflows, users, permissions, and integrations.</p></li>
+        <li><h4>Deploy in Stages</h4><p>Start with the control point that provides the most immediate value, then extend.</p></li>
+        <li><h4>Extend the Platform</h4><p>Add workflows and reporting as requirements mature.</p></li>
       </ol>
-    </div>
-  </section>
-
-  <!-- OPERATIONAL EXAMPLES -->
-  <section class="section section-tint">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Operational examples</p>
-        <h2>How CargoMan Applies to Different Operations.</h2>
-        <p>Illustrative patterns based on the kinds of operations CargoMan supports - not specific customer deployments.</p>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <span class="tag">MINERAL LOGISTICS</span>
-          <h3>High-Volume Truck Receiving</h3>
-          <p>High-volume truck movements arrive from multiple origins with expected-truck information, origin references, and weight data that must be controlled at the destination.</p>
-          <ul class="mini-list">
-            <li>Pre-advice, gate, weighbridge, and receiving connected in sequence</li>
-            <li>Planned vs actual movement control</li>
-            <li>Traceable truck and weight history</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="tag">CONTAINER OPERATIONS</span>
-          <h3>Container Packing and Release</h3>
-          <p>Cargo receipts, stock, container packing, seals, photographs, signatures, and releases exist across separate records.</p>
-          <ul class="mini-list">
-            <li>Receiving, stock, and container allocation in one history</li>
-            <li>Cargo-to-container traceability through packing and seals</li>
-            <li>Evidence attached to the transaction, not a separate file</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="tag">MULTI-SITE OPERATIONS</span>
-          <h3>Distributed Warehouse and Depot Sites</h3>
-          <p>Sites execute locally while management needs consolidated visibility, consistent information, and resilient local operations.</p>
-          <ul class="mini-list">
-            <li>Local execution with central synchronisation</li>
-            <li>Consistent operational data across sites</li>
-            <li>Consolidated reporting, less manual spreadsheet work</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -264,7 +214,6 @@
         <h5>PLATFORM</h5>
         <a href="platform.html">Overview</a>
         <a href="solutions.html">Solutions</a>
-        <a href="industries.html">Industries</a>
       </div>
       <div>
         <h5>SOLUTIONS</h5>
