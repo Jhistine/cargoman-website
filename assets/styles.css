@@ -213,28 +213,30 @@ footer a:focus-visible, footer button:focus-visible{
 .hero h1{ color: var(--dark); }
 .hero .lede{ margin-top: 18px; font-size: 18px; color: var(--text-soft); max-width: 52ch; }
 .hero-actions{ display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
-.hero-foot{ display: flex; gap: 0; flex-wrap: wrap; margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--border); }
-.hero-cap{
-  display: flex; align-items: center; gap: 13px; flex: 1 1 150px;
-  padding: 10px 20px; margin: -8px 0; border-radius: 10px;
-  transition: background .18s ease, transform .18s ease;
+.hero-foot{
+  display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+  margin-top: 52px; padding-top: 36px; border-top: 1px solid var(--border);
 }
-.hero-cap:hover{ background: var(--offwhite); transform: translateY(-2px); }
-.hero-cap + .hero-cap{ border-left: 1px solid var(--border); }
+.hero-cap{
+  display: flex; align-items: center; gap: 15px; flex: 1 1 240px; max-width: 320px;
+  padding: 18px 22px; border-radius: 14px;
+  background: #fff; border: 1px solid var(--border);
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.hero-cap:hover{ border-color: var(--dark); box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .hero-cap-icon{
-  width: 40px; height: 40px; border-radius: 12px; flex: 0 0 auto;
+  width: 44px; height: 44px; border-radius: 13px; flex: 0 0 auto;
   display: flex; align-items: center; justify-content: center;
   background: var(--orange); color: #fff;
   box-shadow: 0 1px 2px rgba(255,87,34,0.15);
-  transition: filter .18s ease;
+  transition: filter .18s ease, transform .18s ease;
 }
-.hero-cap:hover .hero-cap-icon{ filter: brightness(1.08); }
-.hero-cap-icon svg{ width: 19px; height: 19px; }
+.hero-cap:hover .hero-cap-icon{ filter: brightness(1.08); transform: scale(1.08); }
+.hero-cap-icon svg{ width: 20px; height: 20px; }
 .hero-cap-label{ display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--dark); margin-bottom: 3px; }
 .hero-cap-desc{ display: block; font-size: 13px; color: var(--text-soft); line-height: 1.35; }
 @media (max-width: 560px){
-  .hero-cap{ flex: 1 1 100%; }
-  .hero-cap + .hero-cap{ border-left: none; margin-top: 8px; }
+  .hero-cap{ flex: 1 1 100%; max-width: none; }
 }
 
 .shot-tag{ margin-top: 12px; font-size: 12.5px; color: var(--text-soft); }
