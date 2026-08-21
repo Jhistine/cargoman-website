@@ -20,14 +20,11 @@ html { scroll-behavior: smooth; }
   --orange:     #FF5722;  /* Primary Orange */
   --blue:       #00BDFF;  /* Accent Blue */
   --white:      #ffffff;
-  --green-deep: #006930;  /* derived — all readable text */
+  --green-deep: #006930;  /* derived — headings, nav, and other UI accents
+                              (NOT body copy — see --text below) */
   --footer-bg:  #0B7A3D;  /* derived — richer/brighter than --green-deep so the
                               footer reads as the brand green rather than a
                               near-black slab; still ~5.4:1 with white text */
-  --near-black: #12160f;  /* new — black text on the final CTA's off-white
-                              background (not a dark section bg); a soft black
-                              with a whisper of green so it still feels part
-                              of the palette rather than generic */
 
   --dark:   var(--green-deep);  /* headings, nav, borders, large UI */
   --ink:    var(--green-deep);  /* footer / skip-link background, prominent labels */
@@ -46,11 +43,15 @@ html { scroll-behavior: smooth; }
   --border:       rgba(0,105,48,0.14);    /* decorative dividers */
   --border-strong:rgba(0,105,48,0.6);     /* interactive/UI-component borders (meets 3:1) */
   --border-dark:  rgba(255,255,255,0.18);  /* dividers on the dark footer */
-  --slate-300:    rgba(0,105,48,0.3);
-  --slate-light:  rgba(0,105,48,0.8);     /* muted body copy — alias of --text-soft */
+  --slate-300:    rgba(69,69,69,0.3);
+  --slate-light:  #6E6E6E;     /* muted body copy — alias of --text-soft */
 
-  --text:         var(--green-deep);
-  --text-soft:    rgba(0,105,48,0.82);
+  /* Body copy is neutral dark grey, not green — only headings (and
+     nav/logo/link-style UI accents via --dark/--ink above) stay
+     brand green. Keeps large blocks of paragraph text from reading
+     as "everything is green" while headings still carry the brand. */
+  --text:         #454545;  /* primary body copy, ~9.6:1 on white */
+  --text-soft:    #6E6E6E;  /* secondary/muted copy, ~5.1:1 on white */
 
   /* type — Inter only, throughout */
   --font-head: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -509,12 +510,11 @@ footer a:focus-visible, footer button:focus-visible{
    ============================================================ */
 .final-cta{
   background: var(--offwhite);
-  color: var(--near-black); text-align: center; padding: 88px 0 96px;
+  text-align: center; padding: 88px 0 96px;
   border-top: 1px solid var(--border);
 }
-.final-cta h2{ color: var(--near-black); margin-top: 10px; }
-.final-cta p{ max-width: 52ch; margin: 16px auto 0; color: rgba(18,22,15,0.66); font-size: 17px; }
-.final-cta .eyebrow{ color: var(--near-black); }
+.final-cta h2{ margin-top: 10px; }
+.final-cta p{ max-width: 52ch; margin: 16px auto 0; color: var(--text-soft); font-size: 17px; }
 .final-cta .hero-actions{ justify-content: center; }
 
 /* ============================================================
@@ -780,22 +780,3 @@ footer .foot-grid a:hover{ color: #fff; }
 .reveal-hidden{ opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal-hidden.is-visible{ opacity: 1; transform: translateY(0); }
 
-/* ============================================================
-   Off-white sections (.section-tint) use near-black text instead
-   of the usual green — same "less green" reasoning as the final
-   CTA, extended to the other off-white sections kept for rhythm
-   (Operating Model, Platform Capabilities, Implementation
-   methodology, Nationwide Impact). Selectors are scoped/specific
-   enough to win over each component's own text-color rule
-   regardless of where in the file that rule is defined.
-   ============================================================ */
-.section-tint h2, .section-tint h3, .section-tint h4{ color: var(--near-black); }
-.section-tint .eyebrow{ color: var(--near-black); }
-.section-tint .solution-num{ color: var(--near-black); }
-.section-tint p,
-.section-tint .card p,
-.section-tint .persona-card p,
-.section-tint .step-list p,
-.section-tint .section-head p:last-child{
-  color: rgba(18,22,15,0.72);
-}
