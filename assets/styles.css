@@ -779,3 +779,23 @@ footer .foot-grid a:hover{ color: #fff; }
    ============================================================ */
 .reveal-hidden{ opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal-hidden.is-visible{ opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   Off-white sections (.section-tint) use near-black text instead
+   of the usual green — same "less green" reasoning as the final
+   CTA, extended to the other off-white sections kept for rhythm
+   (Operating Model, Platform Capabilities, Implementation
+   methodology, Nationwide Impact). Selectors are scoped/specific
+   enough to win over each component's own text-color rule
+   regardless of where in the file that rule is defined.
+   ============================================================ */
+.section-tint h2, .section-tint h3, .section-tint h4{ color: var(--near-black); }
+.section-tint .eyebrow{ color: var(--near-black); }
+.section-tint .solution-num{ color: var(--near-black); }
+.section-tint p,
+.section-tint .card p,
+.section-tint .persona-card p,
+.section-tint .step-list p,
+.section-tint .section-head p:last-child{
+  color: rgba(18,22,15,0.72);
+}
