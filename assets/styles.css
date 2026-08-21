@@ -22,9 +22,9 @@ html { scroll-behavior: smooth; }
   --white:      #ffffff;
   --green-deep: #006930;  /* derived — headings, nav, and other UI accents
                               (NOT body copy — see --text below) */
-  --footer-bg:  #0B7A3D;  /* derived — richer/brighter than --green-deep so the
-                              footer reads as the brand green rather than a
-                              near-black slab; still ~5.4:1 with white text */
+  --footer-bg:  #1A1A1A;  /* near-black, per reference — white text carries the
+                              footer, with the brand orange kept as the one
+                              small accent (see footer h5::before) */
 
   --dark:   var(--green-deep);  /* headings, nav, borders, large UI */
   --ink:    var(--green-deep);  /* footer / skip-link background, prominent labels */
@@ -518,32 +518,33 @@ footer a:focus-visible, footer button:focus-visible{
 .final-cta .hero-actions{ justify-content: center; }
 
 /* ============================================================
-   Footer — the one intentionally dark section, using the deeper
-   green so white text stays comfortably readable. Compact by
-   design: padding and internal spacing are deliberately tight so
-   the footer reads as a dense information block, not a large
-   dark area with content floating inside it.
+   Footer — the one intentionally dark section, near-black so
+   white text carries it with only a small orange accent (the
+   h5 label dash below). Compact by design: padding and internal
+   spacing are deliberately tight so the footer reads as a dense
+   information block, not a large dark area with content floating
+   inside it.
    ============================================================ */
-footer{ background: var(--footer-bg); color: rgba(255,255,255,0.72); padding: 48px 0 24px; }
-.foot-grid{ display: grid; grid-template-columns: 1.4fr 0.85fr 1.3fr 0.85fr; gap: 32px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+footer{ background: var(--footer-bg); color: rgba(255,255,255,0.85); padding: 48px 0 24px; }
+.foot-grid{ display: grid; grid-template-columns: 1.4fr 0.85fr 1.3fr 0.85fr; gap: 32px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.16); }
 .foot-logo{ display: flex; align-items: center; gap: 9px; font-family: var(--font-head); font-weight: 700; font-size: 18px; color: #fff; margin-bottom: 12px; }
 .foot-logo img{ height: 26px; width: auto; }
-.foot-p{ font-size: 13.5px; line-height: 1.55; max-width: 30ch; color: rgba(255,255,255,0.55); }
-.foot-by{ margin-top: 14px; display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: rgba(255,255,255,0.45); }
+.foot-p{ font-size: 13.5px; line-height: 1.55; max-width: 30ch; color: rgba(255,255,255,0.68); }
+.foot-by{ margin-top: 14px; display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: rgba(255,255,255,0.6); }
 .foot-by img{ height: 16px; width: auto; opacity: 0.9; }
-.foot-by a{ color: rgba(255,255,255,0.75); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+.foot-by a{ color: rgba(255,255,255,0.88); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
 .foot-by a:hover{ color: #fff; }
 footer h5{
   display: flex; align-items: center; gap: 8px;
-  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.42);
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.6);
   margin-bottom: 12px; font-weight: 700;
 }
 footer h5::before{ content:""; width: 12px; height: 2px; background: var(--orange); border-radius: 2px; flex: 0 0 auto; }
-footer .foot-grid a{ display: block; font-size: 14px; color: rgba(255,255,255,0.72); margin-bottom: 9px; }
+footer .foot-grid a{ display: block; font-size: 14px; color: rgba(255,255,255,0.85); margin-bottom: 9px; }
 footer .foot-grid a:hover{ color: #fff; }
 .foot-grid .foot-by a{ display: inline-flex; margin-bottom: 0; }
-.foot-bottom{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 18px; font-size: 12.5px; color: rgba(255,255,255,0.42); }
-.foot-bottom a{ color: rgba(255,255,255,0.58); }
+.foot-bottom{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 18px; font-size: 12.5px; color: rgba(255,255,255,0.6); }
+.foot-bottom a{ color: rgba(255,255,255,0.72); }
 .foot-bottom a:hover{ color: #fff; }
 
 @media (max-width: 760px){
