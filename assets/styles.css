@@ -24,6 +24,9 @@ html { scroll-behavior: smooth; }
   --footer-bg:  #0B7A3D;  /* derived — richer/brighter than --green-deep so the
                               footer reads as the brand green rather than a
                               near-black slab; still ~5.4:1 with white text */
+  --near-black: #12160f;  /* new — sparing dark contrast section (final CTA only),
+                              a soft black with a whisper of green so it still
+                              feels part of the palette rather than generic */
 
   --dark:   var(--green-deep);  /* headings, nav, borders, large UI */
   --ink:    var(--green-deep);  /* footer / skip-link background, prominent labels */
@@ -504,12 +507,11 @@ footer a:focus-visible, footer button:focus-visible{
    Final CTA
    ============================================================ */
 .final-cta{
-  background: var(--white);
-  color: var(--dark); text-align: center; padding: 88px 0 56px;
-  border-top: 1px solid var(--border);
+  background: var(--near-black);
+  color: #fff; text-align: center; padding: 88px 0 96px;
 }
-.final-cta h2{ color: var(--dark); margin-top: 10px; }
-.final-cta p{ max-width: 52ch; margin: 16px auto 0; color: var(--text-soft); font-size: 17px; }
+.final-cta h2{ color: #fff; margin-top: 10px; }
+.final-cta p{ max-width: 52ch; margin: 16px auto 0; color: rgba(255,255,255,0.72); font-size: 17px; }
 .final-cta .hero-actions{ justify-content: center; }
 
 /* ============================================================
