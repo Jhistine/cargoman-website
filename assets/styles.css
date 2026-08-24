@@ -719,7 +719,7 @@ footer .foot-grid a:hover{ color: #fff; }
    province list + interactive SA map, rendered by
    assets/clients-map.js from assets/data/clients.js.
    ============================================================ */
-.clients-layout{ max-width: 900px; margin: 0 auto; }
+.clients-layout{ max-width: 700px; }
 
 .clients-map-wrap{
   position: relative; background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
