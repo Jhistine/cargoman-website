@@ -417,7 +417,7 @@ footer a:focus-visible, footer button:focus-visible{
 
 /* Fixed 2-column variant for card groups with an even count that
    shouldn't wrap 3-then-1 in the default grid (e.g. 4 items) */
-.cards.cards-2col{ grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; }
+.cards.cards-2col{ grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 620px){ .cards.cards-2col{ grid-template-columns: 1fr; } }
 
 /* Generic 2-column override for grids with an even item count.
