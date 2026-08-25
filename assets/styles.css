@@ -374,6 +374,10 @@ footer a:focus-visible, footer button:focus-visible{
 
 .tape-note{ font-size: 13.5px; color: var(--text-soft); margin-top: 24px; max-width: var(--content-w); margin-left: auto; margin-right: auto; padding: 0 24px; }
 
+.gap-statement{ max-width: 620px; margin: 44px auto 0; text-align: center; padding: 0 24px; }
+.gap-statement h3{ font-size: clamp(20px, 2.4vw, 26px); font-weight: 700; color: var(--dark); letter-spacing: -0.01em; }
+.gap-statement p{ margin-top: 10px; color: var(--text-soft); font-size: 15.5px; }
+
 /* ============================================================
    Section generic
    ============================================================ */
